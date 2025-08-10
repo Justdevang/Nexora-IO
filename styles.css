@@ -69,89 +69,101 @@ background: linear-gradient(141deg, var(--token-cd9ad879-0340-4881-8da6-7efa1100
 
 
 /* Navbar container */
+/* Navbar Styles */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(12, 12, 17, 0.85); /* Semi-transparent dark background */
-  backdrop-filter: saturate(180%) blur(12px); /* Frosted glass effect */
-  box-shadow: 0 1px 1px #161616; /* purple glow shadow */
-  z-index: 9999;
-  padding: 0.85rem 2rem;
-  font-family: 'Montserrat', Arial, sans-serif;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
 }
 
-/* Container to align nav content */
 .navbar-container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
 }
 
-/* Logo styling */
 .logo {
-  color: #FFF;
-  font-weight: 500;
   font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
   text-decoration: none;
-  letter-spacing: 0.1em;
-  user-select: none;
-  font-family:"figtree",sans-serif;
-  transition: color 0.3s ease;
-}
-.logo:hover {
-  color: #6446ea;
-  
 }
 
-/* Navigation links */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2.2rem;
-  margin: 0;
-  padding: 0;
+  gap: 2rem;
 }
 
-.nav-links li a {
-  color: #ddd;
-  font-family:"figtree",sans-serif;
-  font-weight: 200;
-  font-size: 1rem;
+.nav-links a {
+  color: #fff;
   text-decoration: none;
-  padding: 0.45rem 0.75rem;
-  border-radius: 0.65rem;
-  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.25s ease;
-  position: relative;
-}
-
-/* Hover glow effect */
-.nav-links li a:hover {
-  color: #fff;
-  background: linear-gradient(95deg, #a679ff 0%, #6446ea 80%);
-}
-
-/* Special button style for Contact */
-.nav-links li a.btn {
-  background:linear-gradient(141deg, rgb(180, 100, 220) 13%, rgba(120, 60, 160, 0) 35%, rgba(80, 40, 120, 0) 64%, rgb(100, 50, 150) 88%);
-  color: #fff;
-   font-family:"figtree",sans-serif;
   font-weight: 500;
-  padding: 0.55rem 1.5rem;
-  user-select: none;
-  white-space: nowrap;
-}
-.nav-links li a.btn:hover {
-  background: #6446ea;
-  box-shadow: 0 0 24px #6446eaee;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
-/* Responsive Nav - optional, collapse nav for smaller screens */
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn {
+  background: linear-gradient(141deg, rgb(180, 100, 220) 13%, rgba(120, 60, 160, 0) 35%, rgba(80, 40, 120, 0) 64%, rgb(100, 50, 150) 88%);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
   .nav-links {
-    display: none;  /* You can implement a hamburger menu here */
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(10, 10, 10, 0.95);
+    flex-direction: column;
+    width: 200px;
+    text-align: right;
+    padding: 1rem;
+    gap: 1rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  .menu-toggle {
+    display: flex;
   }
 }
 
