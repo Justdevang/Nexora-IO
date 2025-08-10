@@ -1,746 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Xtract - Intelligent Automation for Modern Businesses</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Nexora - AI Automation Reimagined</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <canvas id="stars">
-</canvas>
-<nav class="navbar">
-  <div class="navbar-container">
-    <a href="#" class="logo">Nexora</a>
-    <div class="menu-toggle" id="mobile-menu">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="serv.html">Services</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="Contact" class="btn">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-  <div class="center-content">	 
-        <div class="framer-131e2eg190">
-    <div class="framer-14q1urr190"></div>
-    <div class="framer-ht4zsg190"></div>
-  </div>
-    <div class="text-content">
-      <h1>AI Automation, Reimagined for<br>Modern Businesses.</h1>
-      <p>Nexora delivers cutting edge automation and AI content solutions to <br>streamline your workflow, boost productivity, and scale faster  no tech team required<br></p>
-      <div class="cta-buttons">
-        <a href="#" class="btn purple">Get in touch</a>
-        <a href="#" class="btn outline">View services</a>
-      </div>
-    </div>
-  </div>
- 
-  <script src="stars.js"></script>
-  
-  <div class="brand-banner">
-  <div class="banner-title">Built With Powerful Tools	</div>
-  <div class="logo-banner-wrapper">
-    <div class="logos-container">
-      <div class="logo-item"><img src="256.png" alt="Logo 1"/></div>
-      <div class="logo-item"><img src="gemini.png	" alt="Logo 2"/></div>
-      <!-- ... duplicate all logos for seamless loop ... -->
-      <div class="logo-item"><img src="11lab.png" alt="Logo 1"/></div>
-      <div class="logo-item"><img src="openai.png" alt="Logo 2"/></div>
-	  <div class="logo-item"><img src="twilio.png" alt="Logo 1"/></div>
-    </div>
-  </div>
-</div>
- <div class="container">
-        <div class="header">
+    <canvas id="stars"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo">Nexora</a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="btn">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="center-content">
+            <div class="spinning-halo"></div>
+            <div class="text-content">
+                <h1>AI Automation, Reimagined for<br>Modern Businesses.</h1>
+                <p class="tagline">Nexora delivers cutting edge automation and AI content solutions to streamline your workflow, boost productivity, and scale faster — no tech team required</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn purple">Get Started</a>
+                    <a href="#" class="btn outline">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Banner -->
+    <section class="brand-banner">
+        <div class="banner-title">Trusted by leading companies</div>
+        <div class="logo-banner-wrapper">
+            <div class="logos-container" id="logos">
+                <div class="logo-item">Microsoft</div>
+                <div class="logo-item">Google</div>
+                <div class="logo-item">Amazon</div>
+                <div class="logo-item">Salesforce</div>
+                <div class="logo-item">HubSpot</div>
+                <div class="logo-item">Zapier</div>
+                <div class="logo-item">Slack</div>
+                <div class="logo-item">Notion</div>
+                <!-- Duplicate for seamless loop -->
+                <div class="logo-item">Microsoft</div>
+                <div class="logo-item">Google</div>
+                <div class="logo-item">Amazon</div>
+                <div class="logo-item">Salesforce</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="header">
+                <div class="services-tag">SERVICES</div>
+                <h2 class="main-title">We help you streamline internal operations</h2>
+                <p class="subtitle">by automating manual workflows like data entry, reporting, and approval chains — saving time and cutting down errors.</p>
+            </div>
             
-            <h1 class="main-title">
-                AI Solutions That Take Your<br>
-                Business to the Next Level
-            </h1>
-            <p class="subtitle">
-                We design, develop, and implement automation tools that help you work smarter, not harder
-            </p>
-        </div>
-
-        <div class="content-section">
-            <div class="task-panel scroll-animate-left">
-                <div class="panel-header">
-                    <span class="panel-title">AI Dashboard</span>
-                </div>
-
-                <div class="animated-container">
-                    <h3>Smart Automation Hub</h3>
-                    <p>Experience the power of AI-driven automation with real-time monitoring and intelligent task management.</p>
-                    
-                    <div class="animated-features">
-                        <div class="feature-item">
-                            <div class="feature-icon"><span class="material-symbols-outlined">
-extension
-</span></div>
-                            <div class="feature-text">Integrated System</div>
+            <div class="content-section">
+                <div class="scroll-animate-left">
+                    <div class="task-panel">
+                        <div class="panel-header">
+                            <h3 class="panel-title">Unlock the power of AI automation</h3>
+                            <span class="status-text">Real-time insights</span>
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon"><span class="material-symbols-outlined">
-rocket_launch
-</span></div>
-                            <div class="feature-text">Lightning Fast</div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">	<span class="material-symbols-outlined">
-chart_data
-</span></div>
-                            <div class="feature-text">Scalable</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="workflow-section scroll-animate-right">
-                
-                <h2>Ready to unlock your next level of growth?	</h2>
-                
-                <p class="workflow-description">
-                    Let Nexora automate your workflows, generate your content, and fuel your leads  while you focus on what matters.
-                </p>
-
-                <div class="stats">
-                    <div class="stat-item">
-                        <div class="stat-number">Internal Task Bots</div>
-                        <div class="stat-label"></div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">100+ Automations</div>
-                        <div class="stat-label"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
- <!-- second body --!>
-
-<div class="container1">
-        <div class="header1">
-            <h1 class="main-title1">
-                Your Growth<br> Powered by Automation
-            </h1>
-            
-        </div>
-
-        <div class="content-section1">
-            <!-- FLIPPED ORDER: Workflow section (content) comes first (left side) -->
-            <div class="workflow-section1 scroll-animate-left1">
-				
-                <h2>Your Operations on Autopilot</h2>
-                
-                <p class="workflow-description1">
-                    We help you streamline internal operations by automating manual workflows like data entry, reporting, and approval chains saving time and cutting down errors.
-                </p>
-
-                <div class="stats1">
-                    <div class="stat-item1">
-                        <div class="stat-number1">Real-Time Automation </div>
-                        <div class="stat-label1"></div>
-                    </div>
-                    <div class="stat-item1">
-                        <div class="stat-number1">AI dashboard</div>
-                        <div class="stat-label1"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Task panel (container) comes second (right side) -->
-            <div class="task-panel1 scroll-animate-right1">
-                <div class="panel-header1">
-                    <span class="panel-title1">AI Performance Center</span>
-
-                </div>
-
-                <div class="animated-container1">
-                    <h3>Intelligent Workflow Hub</h3>
-                    <p>Unlock the power of AI automation with real-time insights and smart task handling.</p>
-                    
-                    <div class="animated-features1">
-                        <div class="feature-item1">
-                            <div class="feature-icon1"> <span class="material-symbols-outlined">
-flowchart
-</span></div>
-                            <div class="feature-text1">Flow Control</div>
-                        </div>
-                        <div class="feature-item1">
-                            <div class="feature-icon1"> <span class="material-symbols-outlined">
-monitor_heart
-</span>	</div>
-                            <div class="feature-text1">Live Monitoring</div>
-                        </div>
-                        <div class="feature-item1">
-                            <div class="feature-icon1"> <span class="material-symbols-outlined">
-robot_2
-</span></div>
-                            <div class="feature-text1">AI Assistant</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-	
-	<!--   part 3--!>
-	<div class="container2">
-        <div class="header2">
-            <h1 class="main-title2">
-               A Process Designed for Growth
-            </h1>
-            <p class="subtitle2">
-               Our tools eliminate busywork so you can focus on what matters most.
-            </p>
-        </div>
-
-        <div class="steps-grid2">
-            <!-- Step 1: Smart Analyzing -->
-            <div class="step-card2" data-step="1">              
-                <h3 class="step-title2">Plug Into Possibility</h3>
-                <p class="step-description2">
-                    We audit your business flows and uncover high-impact automation opportunities using smart AI insights.
-                </p>
-                <div class="step-visual2">
-                    <div class="step1-visual2">
-                        <div class="analyzing-radar2" id="radar12">
-                            
-                            <div class="radar-ray12"></div>
-                        </div>
-                        <div class="checklist2">
-                            <div class="checklist-item2" data-item="0"> System check </div>
-                            <div class="checklist-item2" data-item="1">Process check</div>
-                            <div class="checklist-item2" data-item="2">Speed check</div>
-                            <div class="checklist-item2" data-item="3">Manual work</div>
-                            <div class="checklist-item2" data-item="4">Repetitive task</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Step 2: AI Development -->
-            <div class="step-card2" data-step="2">               
-                <h3 class="step-title2">Craft Your AI Stack</h3>
-                <p class="step-description2">
-                    We design custom no-code automation systems, content generators, and AI workflows built for scale and speed.
-                </p>
-                <div class="step-visual2">
-                    <div class="step2-visual2">
-                        <div class="window-container2">
-                            <div class="window-header2">
-                                <div class="window-buttons2">
-                                    <div class="window-button2 close2"></div>
-                                    <div class="window-button2 minimize2"></div>
-                                    <div class="window-button2 maximize2"></div>
+                        <div class="animated-container">
+                            <h3>Smart Task Management</h3>
+                            <p>Our tools eliminate busywork so you can focus on what matters most.</p>
+                            <div class="animated-features">
+                                <div class="feature-item">
+                                    <div class="feature-icon">⚡</div>
+                                    <div class="feature-text">Fast</div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">🎯</div>
+                                    <div class="feature-text">Accurate</div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">🔄</div>
+                                    <div class="feature-text">Automated</div>
                                 </div>
                             </div>
-                            <div class="window-content2" id="codeContent2">
-                                <div class="code-line2"><span class="code-keyword2">class</span> <span class="code-function2">AutomationTrigger</span>:</div>
-                                <div class="code-line2">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword2">def</span> <span class="code-function2">__init__</span>(<span class="code-string2">self, threshold</span>):</div>
-                                <div class="code-line2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string2">self.threshold</span> = threshold</div>
-                                <div class="code-line2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string2">self.status</span> = <span class="code-string2">"inactive"</span></div>
-                                <div class="code-line2"></div>
-                                <div class="code-line2">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword2">def</span> <span class="code-function2">check_trigger</span>(<span class="code-string2">self, value</span>):</div>
-                                <div class="code-line2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword2">if</span> value >= <span class="code-string2">self.threshold</span>:</div>
-                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Step 3: Seamless Integration - UPDATED -->
-            <div class="step-card2" data-step="3">
-                <h3 class="step-title2">Launch Like a Machine</h3>
-                <p class="step-description2">
-                    Deploy your AI engine across platforms — from lead funnels to voice bots without a single line of code.
-                </p>
-                <div class="step-visual2">
-                    <div class="step3-visual2">
-                        <div class="left-container2">
-						<!-- From Uiverse.io by Smit-Prajapati --> 
-<div class="card7">
-  <div class="background7">
-  </div>
-  <div class="logo7">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.667 31.69" class="logo-svg7">
-      <path id="Path_6" data-name="Path 6" d="M12.827,1.628A1.561,1.561,0,0,1,14.31,0h2.964a1.561,1.561,0,0,1,1.483,1.628v11.9a9.252,9.252,0,0,1-2.432,6.852q-2.432,2.409-6.963,2.409T2.4,20.452Q0,18.094,0,13.669V1.628A1.561,1.561,0,0,1,1.483,0h2.98A1.561,1.561,0,0,1,5.947,1.628V13.191a5.635,5.635,0,0,0,.85,3.451,3.153,3.153,0,0,0,2.632,1.094,3.032,3.032,0,0,0,2.582-1.076,5.836,5.836,0,0,0,.816-3.486Z" transform="translate(0 0)"></path>
-      <path id="Path_7" data-name="Path 7" d="M75.207,20.857a1.561,1.561,0,0,1-1.483,1.628h-2.98a1.561,1.561,0,0,1-1.483-1.628V1.628A1.561,1.561,0,0,1,70.743,0h2.98a1.561,1.561,0,0,1,1.483,1.628Z" transform="translate(-45.91 0)"></path>
-      <path id="Path_8" data-name="Path 8" d="M0,80.018A1.561,1.561,0,0,1,1.483,78.39h26.7a1.561,1.561,0,0,1,1.483,1.628v2.006a1.561,1.561,0,0,1-1.483,1.628H1.483A1.561,1.561,0,0,1,0,82.025Z" transform="translate(0 -51.963)"></path>
-    </svg>
-  </div>
-  <div class="box7 box17">
-    <span class="icon7">
-      <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" class="svg7">
-        <path d="M 9.9980469 3 C 6.1390469 3 3 6.1419531 3 10.001953 L 3 20.001953 C 3 23.860953 6.1419531 27 10.001953 27 L 20.001953 27 C 23.860953 27 27 23.858047 27 19.998047 L 27 9.9980469 C 27 6.1390469 23.858047 3 19.998047 3 L 9.9980469 3 z M 22 7 C 22.552 7 23 7.448 23 8 C 23 8.552 22.552 9 22 9 C 21.448 9 21 8.552 21 8 C 21 7.448 21.448 7 22 7 z M 15 9 C 18.309 9 21 11.691 21 15 C 21 18.309 18.309 21 15 21 C 11.691 21 9 18.309 9 15 C 9 11.691 11.691 9 15 9 z M 15 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 19 A 4 4 0 0 0 19 15 A 4 4 0 0 0 15 11 z"></path>
-      </svg>
-    </span>
-  </div>
-  <div class="box7 box27">
-    <span class="icon7">
-      <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="svg7">
-        <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
-      </svg>
-    </span>
-  </div>
-  <div class="box7 box37">
-    <span class="icon7">
-      <svg viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg" class="svg7">
-        <path d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z"></path>
-      </svg>
-    </span>
-  </div>
-  <div class="box7 box47"></div>
-</div>
-
-                        </div>
-                        <div class="connection-lines2" id="linesContainer2">
-                            <div class="animated-lines2">
-                                <div class="line2"></div>
-                                <div class="line2"></div>
-                                <div class="line2"></div>
-                                <div class="line2"></div>
+                
+                <div class="scroll-animate-right">
+                    <div class="workflow-section">
+                        <h2>Audit & Optimize</h2>
+                        <p class="workflow-description">We audit your business flows and uncover high-impact automation opportunities using smart AI insights.</p>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <div class="stat-number">85%</div>
+                                <div class="stat-label">Time Saved</div>
                             </div>
-                        </div>
-                        <div class="right-container2">
-                            <!-- From Uiverse.io by chase2k25 --> 
-<div class="checkbox-container8">
-  <input class="checkbox-input8" id="hacker-checkbox8" type="checkbox" />
-  <label class="checkbox-label8" for="hacker-checkbox8">
-    <span class="checkmark8"></span>
-    <div class="grid-bg8"></div>
-    <div class="glitch-overlay-h8"></div>
-    <div class="glitch-overlay-v8"></div>
-    <div class="binary-particles8">
-      <span style="left: 10%; animation-delay: 0s;" class="particle8">1</span>
-      <span style="left: 30%; animation-delay: -0.2s;" class="particle8">0</span>
-      <span style="left: 50%; animation-delay: -0.4s;" class="particle8">1</span>
-      <span style="left: 70%; animation-delay: -0.6s;" class="particle8">0</span>
-      <span style="left: 90%; animation-delay: -0.8s;" class="particle8">1</span>
-    </div>
-  </label>
-</div>
-
-                           
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Step 4: Continuous Optimization -->
-            <div class="step-card2" data-step="4">             
-                <h3 class="step-title2">Auto-Optimize & Dominate</h3>
-                <p class="step-description2">
-                    Your systems get smarter with time. Track, learn, and evolve in real-time  all on autopilot.
-                </p>
-                <div class="step-visual2">
-                    <div class="step4-visual2">
-                        <!-- From Uiverse.io by code-town3 --> 
-<div class="stat-card9">
-  <div class="stat-card-header9">
-    <div class="stat-card-title9">Monthly Revenue</div>
-    <div class="menu-wrapper9">
-      <input class="menu-toggle9" id="menu-toggle9" type="checkbox" />
-      <label class="menu-dots9" for="menu-toggle9">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-      <div class="menu-select9">
-        <div>View</div>
-        <div>Edit</div>
-        <div>Delete</div>
-      </div>
-    </div>
-  </div>
-  <div class="stat-card-chart9">
-    <svg class="linechart9" viewBox="0 0 360 120">
-      <defs>
-        <linearGradient y2="1" x2="0" y1="0" x1="0" id="lineGradient9">
-          <stop stop-color="#3d8bff" offset="0%"></stop>
-          <stop stop-color="#1ecb6b" offset="100%"></stop>
-        </linearGradient>
-        <linearGradient y2="1" x2="0" y1="0" x1="0" id="areaGradient9">
-          <stop stop-opacity="0.3" stop-color="#3d8bff" offset="0%"></stop>
-          <stop stop-opacity="0" stop-color="#1ecb6b" offset="100%"></stop>
-        </linearGradient>
-        <linearGradient y2="1" x2="0" y1="0" x1="0" id="tooltipGradient9">
-          <stop stop-opacity="0.95" stop-color="#3d8bff" offset="0%"></stop>
-          <stop stop-opacity="0.95" stop-color="#1ecb6b" offset="100%"></stop>
-        </linearGradient>
-        <filter height="140%" width="140%" y="-20%" x="-20%" id="glow9">
-          <feGaussianBlur
-            result="coloredBlur"
-            stdDeviation="3"
-          ></feGaussianBlur>
-          <feMerge>
-            <feMergeNode in="coloredBlur"></feMergeNode>
-            <feMergeNode in="SourceGraphic"></feMergeNode>
-          </feMerge>
-        </filter>
-      </defs>
-
-      <path
-        fill="url(#areaGradient9)"
-        d="M15,90 L45,40 L75,60 L105,35 L135,60 L165,80 L195,60 L225,70 L255,40 L285,60 L315,50 L345,70 L345,120 L15,120 Z"
-      ></path>
-
-      <polyline
-        filter="url(#glow9)"
-        points="15,90 45,40 75,60 105,35 135,60 165,80 195,60 225,70 255,40 285,60 315,50 345,70"
-        stroke-width="4"
-        stroke="url(#lineGradient9)"
-        fill="none"
-      ></polyline>
-
-      <g class="dot-group9">
-        <circle fill="#3d8bff" r="6" cy="90" cx="15"></circle>
-        <g class="tooltip9">
-          <rect
-            opacity="0.92"
-            fill="#232733"
-            rx="8"
-            height="32"
-            width="70"
-            y="54"
-            x="5"
-          ></rect>
-          <text
-            font-weight="500"
-            font-size="15"
-            fill="#fff"
-            text-anchor="middle"
-            y="74"
-            x="40"
-          >
-            Jan: 12
-          </text>
-        </g>
-      </g>
-      <g class="dot-group9">
-        <circle fill="#3d8bff" r="6" cy="40" cx="45"></circle>
-        <g class="tooltip9">
-          <rect
-            opacity="0.92"
-            fill="#232733"
-            rx="8"
-            height="32"
-            width="70"
-            y="4"
-            x="10"
-          ></rect>
-          <text
-            font-weight="500"
-            font-size="15"
-            fill="#fff"
-            text-anchor="middle"
-            y="24"
-            x="45"
-          >
-            Feb: 40
-          </text>
-        </g>
-      </g>
-      <g class="dot-group9">
-        <circle fill="#3d8bff" r="6" cy="60" cx="75"></circle>
-        <g class="tooltip9">
-          <rect
-            opacity="0.92"
-            fill="#232733"
-            rx="8"
-            height="32"
-            width="70"
-            y="24"
-            x="40"
-          ></rect>
-          <text
-            font-weight="500"
-            font-size="15"
-            fill="#fff"
-            text-anchor="middle"
-            y="44"
-            x="75"
-          >
-            Mar: 28
-          </text>
-        </g>
-      </g>
-      <g class="dot-group9">
-        <circle fill="#3d8bff" r="6" cy="35" cx="105"></circle>
-        <g class="tooltip9">
-          <rect
-            opacity="0.92"
-            fill="#232733"
-            rx="8"
-            height="32"
-            width="70"
-            y="-5"
-            x="70"
-          ></rect>
-          <text
-            font-weight="500"
-            font-size="15"
-            fill="#fff"
-            text-anchor="middle"
-            y="15"
-            x="105"
-          >
-            Apr: 50
-          </text>
-        </g>
-      </g>
-      <g class="dot-group9">
-        <circle fill="#3d8bff" r="6" cy="60" cx="135"></circle>
-        <g class="tooltip9">
-          <rect
-            opacity="0.92"
-            fill="#232733"
-            rx="8"
-            height="32"
-            width="70"
-            y="24"
-            x="100"
-          ></rect>
-          <text
-            font-weight="500"
-            font-size="15"
-            fill="#fff"
-            text-anchor="middle"
-            y="44"
-            x="135"
-          >
-            May: 30
-          </text>
-        </g>
-      </g>
-      <g class="dot-group9">
-        <circle fill="#1ecb6b" r="6" cy="80" cx="165"></circle>
-        <g class="tooltip9">
-          <rect
-            opacity="0.92"
-            fill="#232733"
-            rx="8"
-            height="32"
-            width="70"
-            y="44"
-            x="130"
-          ></rect>
-          <text
-            font-weight="500"
-            font-size="15"
-            fill="#fff"
-            text-anchor="middle"
-            y="64"
-            x="165"
-          >
-            Jun: 18
-          </text>
-        </g>
-      </g>
-      <g class="dot-group9">
-        <circle fill="#1ecb6b" r="6" cy="60" cx="195"></circle>
-        <g class="tooltip9">
-          <rect
-            opacity="0.92"
-            fill="#232733"
-            rx="8"
-            height="32"
-            width="70"
-            y="24"
-            x="160"
-          ></rect>
-          <text
-            font-weight="500"
-            font-size="15"
-            fill="#fff"
-            text-anchor="middle"
-            y="44"
-            x="195"
-          >
-            Jul: 22
-          </text>
-        </g>
-      </g>
-      <g class="dot-group9">
-        <circle fill="#1ecb6b" r="6" cy="70" cx="225"></circle>
-        <g class="tooltip9">
-          <rect
-            opacity="0.92"
-            fill="#232733"
-            rx="8"
-            height="32"
-            width="70"
-            y="34"
-            x="190"
-          ></rect>
-          <text
-            font-weight="500"
-            font-size="15"
-            fill="#fff"
-            text-anchor="middle"
-            y="54"
-            x="225"
-          >
-            Aug: 25
-          </text>
-        </g>
-      </g>
-      <g class="dot-group9">
-        <circle fill="#1ecb6b" r="6" cy="40" cx="255"></circle>
-        <g class="tooltip9">
-          <rect
-            opacity="0.92"
-            fill="#232733"
-            rx="8"
-            height="32"
-            width="70"
-            y="4"
-            x="220"
-          ></rect>
-          <text
-            font-weight="500"
-            font-size="15"
-            fill="#fff"
-            text-anchor="middle"
-            y="24"
-            x="255"
-          >
-            Sep: 38
-          </text>
-        </g>
-      </g>
-      <g class="dot-group9">
-        <circle fill="#1ecb6b" r="6" cy="60" cx="285"></circle>
-        <g class="tooltip9">
-          <rect
-            opacity="0.92"
-            fill="#232733"
-            rx="8"
-            height="32"
-            width="70"
-            y="24"
-            x="250"
-          ></rect>
-          <text
-            font-weight="500"
-            font-size="15"
-            fill="#fff"
-            text-anchor="middle"
-            y="44"
-            x="285"
-          >
-            Oct: 27
-          </text>
-        </g>
-      </g>
-      <g class="dot-group9">
-        <circle fill="#1ecb6b" r="6" cy="50" cx="315"></circle>
-        <g class="tooltip9">
-          <rect
-            opacity="0.92"
-            fill="#232733"
-            rx="8"
-            height="32"
-            width="70"
-            y="14"
-            x="280"
-          ></rect>
-          <text
-            font-weight="500"
-            font-size="15"
-            fill="#fff"
-            text-anchor="middle"
-            y="34"
-            x="315"
-          >
-            Nov: 32
-          </text>
-        </g>
-      </g>
-      <g class="dot-group9">
-        <circle fill="#1ecb6b" r="6" cy="70" cx="345"></circle>
-        <g class="tooltip9">
-          <rect
-            opacity="0.92"
-            fill="#232733"
-            rx="8"
-            height="32"
-            width="70"
-            y="34"
-            x="285"
-          ></rect>
-          <text
-            font-weight="500"
-            font-size="15"
-            fill="#fff"
-            text-anchor="middle"
-            y="54"
-            x="320"
-          >
-            Dec: 20
-          </text>
-        </g>
-      </g>
-
-      <g fill="#b0b6c3" font-size="12" class="x-labels9">
-        <text text-anchor="middle" y="115" x="15">Jan</text>
-        <text text-anchor="middle" y="115" x="45">Feb</text>
-        <text text-anchor="middle" y="115" x="75">Mar</text>
-        <text text-anchor="middle" y="115" x="105">Apr</text>
-        <text text-anchor="middle" y="115" x="135">May</text>
-        <text text-anchor="middle" y="115" x="165">Jun</text>
-        <text text-anchor="middle" y="115" x="195">Jul</text>
-        <text text-anchor="middle" y="115" x="225">Aug</text>
-        <text text-anchor="middle" y="115" x="255">Sep</text>
-        <text text-anchor="middle" y="115" x="285">Oct</text>
-        <text text-anchor="middle" y="115" x="315">Nov</text>
-        <text text-anchor="middle" y="115" x="345">Dec</text>
-      </g>
-    </svg>
-  </div>
-  <div class="stat-card-legend9">
-    <div class="legend-item9">
-      <span>Average monthly sale for every author</span>
-    </div>
-    <div class="legend-item9">
-      <span class="legend-value9">68.9%</span>
-      <span class="legend-change9">▲ 34.5%</span>
-    </div>
-  </div>
-</div>
-
-                        <div class="progress-indicators2">
-                            <div class="progress-item2" data-progress="0">
-                                <div class="loading-circle2"></div>
-                                <div class="progress-text2">Chatbot system</div>
-                                <div class="check-icon2">✓</div>
+                            <div class="stat-item">
+                                <div class="stat-number">95%</div>
+                                <div class="stat-label">Accuracy</div>
                             </div>
-                            <div class="progress-item2" data-progress="1">
-                                <div class="loading-circle2"></div>
-                                <div class="progress-text2">Workflow system</div>
-                                <div class="check-icon2">✓</div>
-                            </div>
-                            <div class="progress-item2" data-progress="2">
-                                <div class="loading-circle2"></div>
-                                <div class="progress-text2">Sales system</div>
-                                <div class="check-icon2">✓</div>
+                            <div class="stat-item">
+                                <div class="stat-number">60%</div>
+                                <div class="stat-label">Cost Reduction</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Second Services Section -->
+    <section class="services-alt">
+        <div class="container1">
+            <div class="content-section1">
+                <div class="scroll-animate-left1">
+                    <div class="workflow-section1">
+                        <h2>Design & Build</h2>
+                        <p class="workflow-description1">We design custom no-code automation systems, content generators, and AI workflows built for scale and speed.</p>
+                        <div class="stats1">
+                            <div class="stat-item1">
+                                <div class="stat-number1">10x</div>
+                                <div class="stat-label1">Faster Deploy</div>
+                            </div>
+                            <div class="stat-item1">
+                                <div class="stat-number1">100%</div>
+                                <div class="stat-label1">No-Code</div>
+                            </div>
+                            <div class="stat-item1">
+                                <div class="stat-number1">24/7</div>
+                                <div class="stat-label1">Support</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scroll-animate-right1">
+                    <div class="task-panel1">
+                        <div class="panel-header1">
+                            <h3 class="panel-title1">Deploy & Scale</h3>
+                            <span class="status-text">Multi-platform</span>
+                        </div>
+                        <div class="animated-container1">
+                            <h3>Cross-Platform Integration</h3>
+                            <p>Deploy your AI engine across platforms — from lead funnels to voice bots without a single line of code.</p>
+                            <div class="animated-features1">
+                                <div class="feature-item1">
+                                    <div class="feature-icon1">🚀</div>
+                                    <div class="feature-text1">Deploy</div>
+                                </div>
+                                <div class="feature-item1">
+                                    <div class="feature-icon1">📈</div>
+                                    <div class="feature-text1">Scale</div>
+                                </div>
+                                <div class="feature-item1">
+                                    <div class="feature-icon1">🔗</div>
+                                    <div class="feature-text1">Connect</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="container2">
+            <div class="header2">
+                <h2 class="main-title2">Your systems get smarter with time</h2>
+                <p class="subtitle2">Track, learn, and evolve in real-time — all on autopilot.</p>
+            </div>
+            
+            <div class="steps-grid2">
+                <div class="step-card2" data-step="1">
+                    <div class="step-number2">Step 1</div>
+                    <h3 class="step-title2">Smart Analyzing</h3>
+                    <p class="step-description2">We analyze your current workflows and identify automation opportunities using AI-driven insights.</p>
+                    <div class="step-visual2">
+                        <div class="step1-visual2">
+                            <div class="analyzing-radar2" id="radar12">
+                                <div class="radar-ray12"></div>
+                                <div class="radar-circles12">
+                                    <div class="radar-circle12" style="width: 20px; height: 20px;"></div>
+                                    <div class="radar-circle12" style="width: 40px; height: 40px;"></div>
+                                    <div class="radar-circle12" style="width: 60px; height: 60px;"></div>
+                                </div>
+                            </div>
+                            <div class="checklist2">
+                                <div class="checklist-item2">✓ Workflow Analysis</div>
+                                <div class="checklist-item2">✓ Data Mapping</div>
+                                <div class="checklist-item2">⏳ Optimization Planning</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card2" data-step="2">
+                    <div class="step-number2">Step 2</div>
+                    <h3 class="step-title2">AI Development</h3>
+                    <p class="step-description2">Our team builds custom automation solutions tailored to your specific business needs.</p>
+                    <div class="step-visual2">
+                        <div class="step2-visual2">
+                            <div class="window-container2">
+                                <div class="window-header2">
+                                    <div class="window-buttons2">
+                                        <div class="window-button2 close2"></div>
+                                        <div class="window-button2 minimize2"></div>
+                                        <div class="window-button2 maximize2"></div>
+                                    </div>
+                                </div>
+                                <div class="window-content2">
+                                    <div class="code-line2"><span class="code-comment2">// Building AI automation</span></div>
+                                    <div class="code-line2"><span class="code-function2">function</span> <span class="code-keyword2">processData</span>() {</div>
+                                    <div class="code-line2">  <span class="code-string2">ai.analyze</span>(workflow);</div>
+                                    <div class="code-line2">  <span class="code-string2">ai.optimize</span>(tasks);</div>
+                                    <div class="code-line2">  <span class="code-keyword2">return</span> automation;</div>
+                                    <div class="code-line2">}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card2" data-step="3">
+                    <div class="step-number2">Step 3</div>
+                    <h3 class="step-title2">Seamless Integration</h3>
+                    <p class="step-description2">Deploy across all your platforms with zero downtime and full compatibility.</p>
+                    <div class="step-visual2">
+                        <div class="step3-visual2">
+                            <div class="left-container2">
+                                <div class="checkbox-container8">
+                                    <input type="checkbox" class="checkbox-input8" id="checkbox8">
+                                    <label for="checkbox8" class="checkbox-label8">
+                                        <div class="grid-bg8"></div>
+                                        <div class="checkmark8"></div>
+                                        <div class="glitch-overlay-h8"></div>
+                                        <div class="glitch-overlay-v8"></div>
+                                        <div class="binary-particles8">
+                                            <span class="particle8" style="left: 20%; animation-delay: 0s;">1</span>
+                                            <span class="particle8" style="left: 50%; animation-delay: 0.3s;">0</span>
+                                            <span class="particle8" style="left: 80%; animation-delay: 0.6s;">1</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="right-container2">
+                                <div id="linesContainer2" class="animated-lines2">
+                                    <div class="line2"></div>
+                                    <div class="line2"></div>
+                                    <div class="line2"></div>
+                                    <div class="line2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card2" data-step="4">
+                    <div class="step-number2">Step 4</div>
+                    <h3 class="step-title2">Continuous Optimization</h3>
+                    <p class="step-description2">Monitor performance and automatically improve efficiency over time.</p>
+                    <div class="step-visual2">
+                        <div class="step4-visual2">
+                            <div class="left-icon-container2" id="chartIcon2">📊</div>
+                            <div class="progress-indicators2">
+                                <div class="progress-item2">
+                                    <div class="loading-circle2"></div>
+                                    <span class="progress-text2">Analyzing performance...</span>
+                                </div>
+                                <div class="progress-item2">
+                                    <div class="arrow-icon2">➡️</div>
+                                    <span class="progress-text2">Optimizing workflows...</span>
+                                </div>
+                                <div class="progress-item2">
+                                    <div class="check-icon2">✅</div>
+                                    <span class="progress-text2">Automation complete!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spinning Animation Section -->
+    <div class="spinner-container">
+        <div class="framer-131e2eg190">
+            <div class="framer-14q1urr190"></div>
+            <div class="framer-ht4zsg190"></div>
+        </div>
     </div>
+
+    <script src="stars.js"></script>
 </body>
 </html>
