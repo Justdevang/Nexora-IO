@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI Solutions Hero</title>
+<style>
+  body {
+    background: #000;
+    color: white;
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  .tag {
+    display: inline-block;
+    background: #111;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: white;
+    border: 1px solid #222;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0 0 16px;
+  }
+  .hero p {
+    font-size: 1rem;
+    color: #aaa;
+    margin: 0 auto 50px;
+    max-width: 600px;
+  }
+  .hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  /* Task List Card */
+  .task-box {
+    background: #0b0b0b;
+    padding: 1rem;
+    border-radius: 16px;
+    width: 320px;
+    color: white;
+    box-shadow: 0 0 30px rgba(0,0,0,0.4);
+    overflow: hidden;
+    border: 1px solid #222;
+  }
+  .tabs {
+    display: flex;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #222;
+  }
+  .tab {
+    flex: 1;
+    text-align: center;
+    padding: 8px 0;
+    background: #1a1a1a;
+    font-size: 0.85rem;
+    cursor: pointer;
+    color: #888;
+  }
+  .tab.active {
+    background: #222;
+    color: white;
+  }
+  .task-wrapper {
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+  }
+  .tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation: scrollTasks linear infinite;
+    animation-duration: 15s;
+  }
+  @keyframes scrollTasks {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+  }
+  .task {
+    background: #1a1a1a;
+    padding: 10px 14px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+  }
+  .task-icon {
+    width: 28px;
+    height: 28px;
+    background: #111;
+    border-radius: 6px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    border: 1px solid #222;
+  }
+  .task-text {
+    flex: 1;
+  }
+  .task-title {
+    font-weight: 600;
+  }
+  .task-sub {
+    font-size: 0.7rem;
+    color: #aaa;
+  }
+  /* Right Content */
+  .right-content {
+    max-width: 500px;
+    text-align: left;
+  }
+  .mini-tag {
+    display: inline-block;
+    background: #111;
+    border-radius: 10px;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: white;
+    border: 1px solid #222;
+    margin-bottom: 16px;
+  }
+  .right-content h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 0 14px;
+  }
+  .right-content p {
+    font-size: 0.95rem;
+    color: #aaa;
+    margin-bottom: 20px;
+  }
+  .btn-group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    background: #111;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: white;
+    border: 1px solid #222;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .btn:hover {
+    background: #222;
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="tag">Our Services</div>
+  <h1>AI Solutions That Take Your Business to the Next Level</h1>
+  <p>We design, develop, and implement automation tools that help you work smarter, not harder</p>
+  
+  <div class="hero-content">
+    <!-- Left: Task Box -->
+    <div class="task-box">
+      <div class="tabs">
+        <div class="tab active">All Tasks</div>
+        <div class="tab">Waiting for approval</div>
+      </div>
+      <div class="task-wrapper">
+        <div class="tasks" id="taskList">
+          <!-- Original list -->
+          <div class="task"><div class="task-icon">💰</div><div class="task-text"><div class="task-title">Payment reminder</div><div class="task-sub">Sent to selected clients</div></div></div>
+          <div class="task"><div class="task-icon">📊</div><div class="task-text"><div class="task-title">Payroll management</div><div class="task-sub">Due on 2nd July</div></div></div>
+          <div class="task"><div class="task-icon">🧭</div><div class="task-text"><div class="task-title">Employee Tracking</div><div class="task-sub">2 days ago</div></div></div>
+          <div class="task"><div class="task-icon">📅</div><div class="task-text"><div class="task-title">Social media post</div><div class="task-sub">Cancelled by user</div></div></div>
+          <div class="task"><div class="task-icon">📋</div><div class="task-text"><div class="task-title">Lead list</div><div class="task-sub">70% prepared</div></div></div>
+          
+          <!-- Duplicate for smooth infinite loop -->
+          <div class="task"><div class="task-icon">💰</div><div class="task-text"><div class="task-title">Payment reminder</div><div class="task-sub">Sent to selected clients</div></div></div>
+          <div class="task"><div class="task-icon">📊</div><div class="task-text"><div class="task-title">Payroll management</div><div class="task-sub">Due on 2nd July</div></div></div>
+          <div class="task"><div class="task-icon">🧭</div><div class="task-text"><div class="task-title">Employee Tracking</div><div class="task-sub">2 days ago</div></div></div>
+          <div class="task"><div class="task-icon">📅</div><div class="task-text"><div class="task-title">Social media post</div><div class="task-sub">Cancelled by user</div></div></div>
+          <div class="task"><div class="task-icon">📋</div><div class="task-text"><div class="task-title">Lead list</div><div class="task-sub">70% prepared</div></div></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Right Content -->
+    <div class="right-content">
+      <div class="mini-tag">Workflow Automation</div>
+      <h2>Automate repetitive tasks</h2>
+      <p>We help you streamline internal operations by automating manual workflows like data entry, reporting, and approval chains saving time and cutting down errors.</p>
+      <div class="btn-group">
+        <div class="btn">Internal Task Bots</div>
+        <div class="btn">100+ Automations</div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  // Restart animation to make it seamless
+  const taskList = document.getElementById('taskList');
+  taskList.addEventListener('animationiteration', () => {
+    taskList.style.animation = 'none';
+    void taskList.offsetWidth; // trigger reflow
+    taskList.style.animation = '';
+    taskList.style.animation = 'scrollTasks linear infinite';
+    taskList.style.animationDuration = '15s';
+  });
+</script>
+</body>
+</html>

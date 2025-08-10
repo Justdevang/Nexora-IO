@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI Solutions Hero</title>
+<link rel="stylesheet" href="serv.css" />
+</head>	
+<body>
+<nav class="navbar">
+  <div class="navbar-container">
+    <a href="#" class="logo">Nexora</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="serv.html">Services</a></li>
+      <li><a href="#about">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#contact" class="btn">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero90 fade-in90">
+  <!-- Centered Header Content -->
+  <div class="hero-header90">
+    <h1>AI Solutions That Take Your Business to the Next Level</h1>
+    <p>We design, develop, and implement automation tools that help you work smarter, not harder</p>
+  </div>
+  
+  <div class="hero-content90">
+    <!-- Left: Task Box -->
+    <div class="task-box90 fade-in90">
+      <div class="tabs90">
+        <div class="tab90 active90">All Tasks</div>
+        <div class="tab90">Waiting for approval</div>
+      </div>
+      <div class="task-wrapper90">
+        <div class="tasks90" id="taskList90">
+          <!-- Original list -->
+          <div class="task90"><div class="task-icon90">💰</div><div class="task-text90"><div class="task-title90">Payment reminder</div><div class="task-sub90">Sent to selected clients</div></div></div>
+          <div class="task90"><div class="task-icon90">📊</div><div class="task-text90"><div class="task-title90">Payroll management</div><div class="task-sub90">Due on 2nd July</div></div></div>
+          <div class="task90"><div class="task-icon90">🧭</div><div class="task-text90"><div class="task-title90">Employee Tracking</div><div class="task-sub90">2 days ago</div></div></div>
+          <div class="task90"><div class="task-icon90">📅</div><div class="task-text90"><div class="task-title90">Social media post</div><div class="task-sub90">Cancelled by user</div></div></div>
+          <div class="task90"><div class="task-icon90">📋</div><div class="task-text90"><div class="task-title90">Lead list</div><div class="task-sub90">70% prepared</div></div></div>
+          
+          <!-- Duplicate for smooth infinite loop -->
+          <div class="task90"><div class="task-icon90">💰</div><div class="task-text90"><div class="task-title90">Payment reminder</div><div class="task-sub90">Sent to selected clients</div></div></div>
+          <div class="task90"><div class="task-icon90">📊</div><div class="task-text90"><div class="task-title90">Payroll management</div><div class="task-sub90">Due on 2nd July</div></div></div>
+          <div class="task90"><div class="task-icon90">🧭</div><div class="task-text90"><div class="task-title90">Employee Tracking</div><div class="task-sub90">2 days ago</div></div></div>
+          <div class="task90"><div class="task-icon90">📅</div><div class="task-text90"><div class="task-title90">Social media post</div><div class="task-sub90">Cancelled by user</div></div></div>
+          <div class="task90"><div class="task-icon90">📋</div><div class="task-text90"><div class="task-title90">Lead list</div><div class="task-sub90">70% prepared</div></div></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Right Content - Now properly positioned on the right -->
+    <div class="right-content90 fade-in90">
+      
+      <h2>Automate repetitive tasks</h2>
+      <p>We help you streamline internal operations by automating manual workflows like data entry, reporting, and approval chains saving time and cutting down errors.</p>
+      <div class="btn-group90">
+        <div class="btn90">Internal Task Bots</div>
+        <div class="btn90">100+ Automations</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section190 fade-in190">
+  <!-- LEFT CONTENT -->
+  <div class="left-content190">
+    <div class="tag190">AI Assistant</div>
+    <h2>Delegate Daily Tasks</h2>
+    <p>
+      From managing calendars to drafting emails and summarizing meetings,
+      our AI assistants work around the clock to keep your business running smarter and faster.
+    </p>
+    <div class="buttons190">
+      <button>Summaries</button>
+      <button>Scheduling</button>
+      <button>Many more</button>
+    </div>
+  </div>
+
+  <!-- RIGHT ASSISTANT BOX -->
+  <div class="agent-box190">
+    <div class="framer-131e2eg190">
+      <div class="framer-14q1urr190"></div>
+      <div class="framer-ht4zsg190"></div>
+    </div>
+    <h1>What can I help with?</h1>
+    <p class="subtext190">Whether you want help in customer handling or make changes in your system just give me command</p>
+
+    <div class="input-container190">
+      <input type="text" id="agentInput190" placeholder="">
+      <button class="send-btn190">&#9658;</button>
+    </div>
+
+    <div class="footer190">
+      <button>Analyze</button>
+      <button>Generate Image</button>
+      <button>Research</button>
+    </div>
+  </div>
+</div>
+<main class="layout">
+    <!-- Content (appears on the right due to flex row-reverse) -->
+    <div class="left fade-in">
+      <span class="badge">Custom Projects</span>
+      <h1 class="hero">Build Smarter Systems</h1>
+      <p class="lead">
+        Whether starting from scratch or enhancing an existing system, we offer strategic consulting
+        and develop custom AI projects aligned with unique goals.
+      </p>
+      <div class="chips">
+        <button class="chip">Strategy</button>
+        <button class="chip">Custom AI</button>
+        <button class="chip">Consulting</button>
+      </div>
+    </div>
+
+    <!-- Scheduler (appears on the left due to flex row-reverse) -->
+    <section class="right fade-in">
+      <section class="shell">
+        <div class="header">
+          <h3>Hey David!</h3>
+          <small>Here is your <b>Custom</b> project & schedule</small>
+        </div>
+
+        <div class="stack">
+          <!-- Ongoing project -->
+          <div class="card">
+            <div class="ongoing">
+              <div class="project-icon"></div>
+              <div>
+                <div style="font-weight:700">Customer Support Chatbot</div>
+                <div class="muted">90% Finished</div>
+              </div>
+              <div class="progress">
+                <span>Sync</span>
+                <span class="ring" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Schedule -->
+          <div class="card schedule" id="scheduler">
+            <div class="days-wrap">
+              <div class="pill" id="pill" style="left:0;width:0"></div>
+              <div class="days" id="days">
+                <div class="day"><span>Mo</span></div>
+                <div class="day"><span>Tu</span></div>
+                <div class="day"><span>We</span></div>
+                <div class="day"><span>Th</span></div>
+                <div class="day"><span>Fr</span></div>
+                <div class="day"><span>Sa</span></div>
+                <div class="day"><span>Su</span></div>
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="events" id="events" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+  
+  <main class="stage" role="main" aria-label="Hero">
+ <section class="card2" aria-labelledby="h"> 
+<h1 class="headline2" id="h"> Let AI do the Work so<br> you can Scale Faster 
+</h1> <p class="sub2">Book a Call Today and Start Automating</p> <div class="actions2"> 
+<button class="btn2" type="button"> Book a free call <span class="arr2">↗</span> </button> 
+</div> 
+</section> 
+</main> 
+<script>
+  // Intersection Observer for fade-in on scroll
+  const fadeElements90 = document.querySelectorAll('.fade-in90');
+
+  const observer90 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible90');
+        observer90.unobserve(entry.target); // animate once
+      }
+    });
+  }, { threshold: 0.1 });
+
+  fadeElements90.forEach(el => observer90.observe(el));
+  
+  // Typing effect
+  const phrases190 = [
+    "Schedule a meeting",
+    "Create a report",
+    "Update client details",
+    "Send a follow-up email"
+  ];
+
+  let currentPhrase190 = 0;
+  let currentChar190 = 0;
+  const input190 = document.getElementById("agentInput190");
+
+  function typePlaceholder190() {
+    if (input190 && currentChar190 <= phrases190[currentPhrase190].length) {
+      input190.setAttribute("placeholder", phrases190[currentPhrase190].substring(0, currentChar190));
+      currentChar190++;
+      setTimeout(typePlaceholder190, 100);
+    } else {
+      setTimeout(erasePlaceholder190, 1500);
+    }
+  }
+
+  function erasePlaceholder190() {
+    if (input190 && currentChar190 >= 0) {
+      input190.setAttribute("placeholder", phrases190[currentPhrase190].substring(0, currentChar190));
+      currentChar190--;
+      setTimeout(erasePlaceholder190, 50);
+    } else {
+      currentPhrase190 = (currentPhrase190 + 1) % phrases190.length;
+      setTimeout(typePlaceholder190, 500);
+    }
+  }
+
+  // Only start typing if element exists
+  if (input190) {
+    typePlaceholder190();
+  }
+
+  // Fade-in on scroll
+  const fadeElems190 = document.querySelectorAll('.fade-in190');
+  const observer190 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible190');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  fadeElems190.forEach(elem => observer190.observe(elem));
+  
+  // Demo data – replace or connect to your source
+  const data = {
+    Mo: [
+      { title: "Lead gen. tutorial", time: "06:00 pm – 06:30 pm", tag:"$" },
+      { title: "Efficiency testing", time: "10:00 am – 10:30 am", tag:"⚙" }
+    ],
+    Tu: [
+      { title: "Team standup", time: "09:30 am – 10:00 am", tag:"👥" },
+      { title: "NLP model review", time: "03:00 pm – 04:00 pm", tag:"🧠" }
+    ],
+    We: [
+      { title: "UI polish sprint", time: "11:00 am – 12:00 pm", tag:"🎨" }
+    ],
+    Th: [
+      { title: "Client check-in", time: "01:00 pm – 01:45 pm", tag:"🤝" },
+      { title: "Dataset labeling", time: "04:30 pm – 05:30 pm", tag:"🏷" }
+    ],
+    Fr: [
+      { title: "Release QA", time: "02:00 pm – 03:30 pm", tag:"✅" }
+    ],
+    Sa: [
+      { title: "Refactor session", time: "12:00 pm – 01:30 pm", tag:"🧩" }
+    ],
+    Su: [
+      { title: "Weekly planning", time: "05:00 pm – 05:30 pm", tag:"🗂" }
+    ]
+  };
+
+  const daysEl = document.getElementById('days');
+  const pill = document.getElementById('pill');
+  const eventsEl = document.getElementById('events');
+  const dayEls = Array.from(daysEl.querySelectorAll('.day'));
+  const dayKeys = ["Mo","Tu","We","Th","Fr","Sa","Su"];
+
+  function setActiveDay(index, animate=true){
+    dayEls.forEach(d=>d.classList.remove('active'));
+    const target = dayEls[index];
+    target.classList.add('active');
+
+    // Move the highlight pill behind the active day
+    const {left, width} = target.getBoundingClientRect();
+    const parentLeft = daysEl.getBoundingClientRect().left;
+    const l = left - parentLeft + 6; // slight inset
+    pill.style.width = (width - 12) + 'px';
+    pill.style.left = l + 'px';
+
+    // Render events with a small staggered fade/slide
+    eventsEl.innerHTML = '';
+    const items = data[dayKeys[index]] || [];
+    if(items.length === 0){
+      const empty = document.createElement('div');
+      empty.className = 'muted';
+      empty.style.padding = '8px 2px 18px';
+      empty.textContent = 'No events';
+      eventsEl.appendChild(empty);
+      return;
+    }
+    items.forEach((evt, i)=>{
+      const row = document.createElement('div');
+      row.className = 'event';
+      row.style.animationDelay = (i*70)+'ms';
+      row.innerHTML = `
+        <div class="icon">${evt.tag || "•"}</div>
+        <div style="font-weight:650">${evt.title}</div>
+        <div class="time">${evt.time}</div>
+      `;
+      eventsEl.appendChild(row);
+    });
+  }
+
+  // Initialize to today (or default to Monday)
+  const todayIdx = (new Date().getDay()+6)%7; // JS: 0=Sun -> map to 0=Mon
+  setActiveDay(todayIdx);
+
+  // Click handlers
+  dayEls.forEach((el, idx)=>{
+    el.addEventListener('click', ()=> {
+      setActiveDay(idx);
+      stopAuto(); // user interacted; pause auto-advance
+      startAuto(6000); // resume after a longer delay
+    });
+  });
+
+  // Auto-advance animation (simulate switching days)
+  let autoTimer=null;
+  function startAuto(interval=3000){
+    stopAuto();
+    autoTimer=setInterval(()=>{
+      const current = dayEls.findIndex(d=>d.classList.contains('active'));
+      const next = (current+1)%dayEls.length;
+      setActiveDay(next);
+    }, interval);
+  }
+  function stopAuto(){ if(autoTimer){ clearInterval(autoTimer); autoTimer=null; } }
+
+  // Start the carousel
+  startAuto(3500);
+
+  // Responsive: recalc pill position on resize
+  addEventListener('resize', ()=>{
+    const active = dayEls.findIndex(d=>d.classList.contains('active'));
+    if(active>=0) setActiveDay(active, false);
+  });
+
+  // Fade-in animation on load and scroll
+  (function(){
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    // Trigger fade-in on page load
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        fadeElements.forEach(el => el.classList.add('visible'));
+      }, 100); // Small delay to ensure smooth animation
+    });
+
+    // Also trigger on scroll if elements come into view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeElements.forEach(el => observer.observe(el));
+
+    // Respect reduced motion preference
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      fadeElements.forEach(el => el.classList.add('visible'));
+    }
+	})();
+</script>
+
+</body>
+</html>

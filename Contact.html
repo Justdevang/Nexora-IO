@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Nexora</title>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- Supabase JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- Keep your existing styles here -->
+    <style>
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Figtree", sans-serif;
+            background: #000;
+            color: #ffffff;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Material Icons Styling */
+        .material-symbols-outlined {
+            font-family: "Figtree",sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation */
+        .navbar01 {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .navbar-container01 {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo01 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .nav-links01 {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links01 a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links01 a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-links01 .btn01 {
+            background: linear-gradient(141deg, rgb(180, 100, 220) 13%, rgba(120, 60, 160, 0) 35%, rgba(80, 40, 120, 0) 64%, rgb(100, 50, 150) 88%);
+            color: #ffffff;
+            border-radius: 8px;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+        }
+
+        .nav-links01 .btn01:hover {
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Contact Section with Enhanced Animations */
+        .contact-section01 {
+            min-height: 100vh;
+            padding: 120px 0 80px;
+            background:#000;
+            position: relative;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .contact-section01.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .contact-section01::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.01) 0%, transparent 50%);
+            pointer-events: none;
+            animation: bgFloat01 8s ease-in-out infinite alternate;
+        }
+
+        @keyframes bgFloat01 {
+            0% { background-position: 0% 0%, 100% 100%; }
+            100% { background-position: 20% 10%, 80% 90%; }
+        }
+
+        .container01 {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Animated Header */
+        .contact-header01 {
+            text-align: center;
+            margin-bottom: 80px;
+            opacity: 0;
+            transform: translateY(30px) scale(0.95);
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .contact-header01.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .section-subtitle01 {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 20px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .main-title01 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 30px;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+            animation: titleGlow01 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes titleGlow01 {
+            0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.1); }
+            100% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.2); }
+        }
+
+        .main-description01 {
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+
+        /* Animated Contact Form Container */
+        .contact-form-container01 {
+            opacity: 0;
+            transform: translateY(40px) scale(0.95);
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .contact-form-container01.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .contact-form01 {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 40px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-form01::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.01) 50%, transparent 70%);
+            animation: formShimmer01 6s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes formShimmer01 {
+            0%, 100% { transform: rotate(0deg); opacity: 0; }
+            50% { transform: rotate(180deg); opacity: 1; }
+        }
+
+        .form-group01 {
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .form-label01 {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+
+        .form-input01,
+        .form-textarea01 {
+            width: 100%;
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 1rem;
+            font-family: "Figtree", sans-serif;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+            resize: none;
+            position: relative;
+            z-index: 2;
+        }
+
+        .form-input01:focus,
+        .form-textarea01:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .form-input01::placeholder,
+        .form-textarea01::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .form-textarea01 {
+            min-height: 120px;
+        }
+
+        .form-submit01 {
+            background: linear-gradient(141deg, rgb(180, 100, 220) 13%, rgba(120, 60, 160, 0) 35%, rgba(80, 40, 120, 0) 64%, rgb(100, 50, 150) 88%);
+            color: #fff;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+            font-family: "Figtree", sans-serif;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .form-submit01::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .form-submit01:hover::before {
+            left: 100%;
+        }
+
+        .form-submit01:hover {
+            background: rgba(255, 255, 255, 0.8);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+        }
+
+        .form-submit01:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Honeypot field (hidden) */
+        .honey {
+            position: absolute;
+            left: -9999px;
+            opacity: 0;
+        }
+
+        /* Success/Error Messages */
+        .form-message01 {
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: 500;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(-10px) scale(0.9);
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            z-index: 2;
+        }
+
+        .form-message01.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .form-message01.success01 {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            color: #22c55e;
+        }
+
+        .form-message01.error01 {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #ef4444;
+        }
+
+        /* Loading State */
+        .loading01 {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(10, 10, 10, 0.3);
+            border-radius: 50%;
+            border-top-color: #0a0a0a;
+            animation: spin01 1s linear infinite;
+            margin-right: 8px;
+        }
+
+        @keyframes spin01 {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Enhanced Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .navbar-container01 {
+                padding: 0 1rem;
+            }
+
+            .container01 {
+                padding: 0 1rem;
+            }
+
+            .contact-section01 {
+                padding: 100px 0 60px;
+            }
+
+            .contact-header01 {
+                margin-bottom: 60px;
+            }
+
+            .contact-form01 {
+                padding: 30px;
+            }
+
+            .nav-links01 {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-form01 {
+                padding: 24px;
+            }
+
+            .form-input01,
+            .form-textarea01 {
+                padding: 14px 16px;
+            }
+
+            .form-submit01 {
+                padding: 14px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar01">
+        <div class="navbar-container01">
+            <a href="#" class="logo01">Nexora</a>
+            <ul class="nav-links01">
+                <li><a href="serv.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="Contact" class="btn01">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section01" id="contact">
+        <div class="container01">
+            <!-- Animated Header -->
+            <div class="contact-header01">
+                <div class="section-subtitle01">Get In Touch</div>
+                <h1 class="main-title01">Contact Us</h1>
+                <p class="main-description01">
+                    Ready to transform your business with AI automation? Let's discuss how we can help you achieve your goals and streamline your operations.
+                </p>
+            </div>
+
+            <!-- Updated Contact Form with Proper Autocomplete Attributes -->
+            <div class="contact-form-container01">
+                <form class="contact-form01" id="contactForm01" autocomplete="on">
+                    <div id="formMessage01" class="form-message01"></div>
+                    
+                    <!-- Honeypot field -->
+                    <input type="text" name="website" class="honey" tabindex="-1" autocomplete="off" />
+                    
+                    <div class="form-group01">
+                        <label for="name01" class="form-label01">Full Name</label>
+                        <input 
+                            type="text" 
+                            id="name01" 
+                            name="name" 
+                            class="form-input01" 
+                            placeholder="Enter your full name" 
+                            autocomplete="name"
+                            required>
+                    </div>
+                    
+                    <div class="form-group01">
+                        <label for="email01" class="form-label01">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="email01" 
+                            name="email" 
+                            class="form-input01" 
+                            placeholder="Enter your email address" 
+                            autocomplete="email"
+                            required>
+                    </div>
+                    
+                    <div class="form-group01">
+                        <label for="company01" class="form-label01">Company Name</label>
+                        <input 
+                            type="text" 
+                            id="company01" 
+                            name="company" 
+                            class="form-input01" 
+                            placeholder="Enter your company name"
+                            autocomplete="organization">
+                    </div>
+                    
+                    <div class="form-group01">
+                        <label for="subject01" class="form-label01">Subject</label>
+                        <input 
+                            type="text" 
+                            id="subject01" 
+                            name="subject" 
+                            class="form-input01" 
+                            placeholder="What's this about?" 
+                            autocomplete="off"
+                            required>
+                    </div>
+                    
+                    <div class="form-group01">
+                        <label for="message01" class="form-label01">Message</label>
+                        <textarea 
+                            id="message01" 
+                            name="message" 
+                            class="form-textarea01" 
+                            placeholder="Tell us about your project and how we can help..." 
+                            autocomplete="off"
+                            required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="form-submit01" id="submitBtn01">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Keep your existing JavaScript here -->
+    <script>
+            // *** REPLACE THESE WITH YOUR ACTUAL SUPABASE CREDENTIALS ***
+        const SUPABASE_URL = 'https://gxxwritpsvofycxrillo.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd4eHdyaXRwc3ZvZnljeHJpbGxvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ4MDg3OTIsImV4cCI6MjA3MDM4NDc5Mn0.nWFv-uLfcvlUGJ3GNbB7bgbDf2loMSALS-38p6DPFLo';
+        
+        // Initialize Supabase client
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        // Enhanced Animation System
+        function animateContactPage() {
+            const contactSection = document.querySelector('.contact-section01');
+            const contactHeader = document.querySelector('.contact-header01');
+            const contactFormContainer = document.querySelector('.contact-form-container01');
+            
+            if (!contactSection.classList.contains('visible')) {
+                // Animate section first
+                setTimeout(() => {
+                    contactSection.classList.add('visible');
+                }, 300);
+                
+                // Animate header with delay
+                setTimeout(() => {
+                    contactHeader.classList.add('visible');
+                }, 500);
+                
+                // Animate form container with further delay
+                setTimeout(() => {
+                    contactFormContainer.classList.add('visible');
+                }, 800);
+            }
+        }
+
+        // Intersection Observer for performance
+        const contactObserverOptions01 = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const contactObserver01 = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateContactPage();
+                }
+            });
+        }, contactObserverOptions01);
+
+        // Form Handling with Enhanced UX
+        function showMessage(message, type) {
+            const messageElement = document.getElementById('formMessage01');
+            messageElement.textContent = message;
+            messageElement.className = `form-message01 ${type}01 visible`;
+            
+            setTimeout(() => {
+                messageElement.classList.remove('visible');
+            }, 5000);
+        }
+
+        function setButtonLoading(loading) {
+            const submitBtn = document.getElementById('submitBtn01');
+            
+            if (loading) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<span class="loading01"></span>Sending...';
+            } else {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Send Message';
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactSection = document.querySelector('.contact-section01');
+            
+            // Check if section is already in view
+            const rect = contactSection.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            if (rect.top < windowHeight * 0.8) {
+                setTimeout(animateContactPage, 100);
+            }
+            
+            // Set up observer
+            contactObserver01.observe(contactSection);
+            
+            // Form submission with Supabase
+            const contactForm = document.getElementById('contactForm01');
+            contactForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                setButtonLoading(true);
+
+                try {
+                    const formData = new FormData(contactForm);
+                    
+                    // Honeypot check
+                    if (formData.get('website')) {
+                        showMessage('Thank you for your message!', 'success');
+                        setButtonLoading(false);
+                        return;
+                    }
+
+                    const payload = {
+                        name: formData.get('name')?.trim(),
+                        email: formData.get('email')?.trim()?.toLowerCase(),
+                        company: formData.get('company')?.trim() || null,
+                        subject: formData.get('subject')?.trim(),
+                        message: formData.get('message')?.trim(),
+                        user_agent: navigator.userAgent
+                    };
+
+                    // Basic client validation
+                    if (!payload.name || !payload.email || !payload.subject || !payload.message) {
+                        showMessage('Please fill in all required fields.', 'error');
+                        setButtonLoading(false);
+                        return;
+                    }
+
+                    // Email validation
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(payload.email)) {
+                        showMessage('Please enter a valid email address.', 'error');
+                        setButtonLoading(false);
+                        return;
+                    }
+
+                    // Insert into Supabase
+                    const { error } = await supabase
+                        .from('contacts')
+                        .insert([payload]);
+
+                    if (error) {
+                        console.error('Supabase error:', error);
+                        showMessage('Failed to send message. Please try again.', 'error');
+                    } else {
+                        showMessage('Thank you! We will get back to you within 24 hours.', 'success');
+                        contactForm.reset();
+
+                        // Success animation
+                        const form = document.querySelector('.contact-form01');
+                        form.style.transform = 'scale(1.02)';
+                        setTimeout(() => { form.style.transform = 'scale(1)'; }, 300);
+                    }
+                } catch (err) {
+                    console.error('Network error:', err);
+                    showMessage('Network error. Please try again.', 'error');
+                } finally {
+                    setButtonLoading(false);
+                }
+            });
+
+            // Enhanced input animations
+            const inputs = document.querySelectorAll('.form-input01, .form-textarea01');
+            inputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.parentElement.querySelector('.form-label01').style.color = '#ffffff';
+                });
+                
+                input.addEventListener('blur', function() {
+                    this.parentElement.querySelector('.form-label01').style.color = 'rgba(255, 255, 255, 0.8)';
+                });
+            });
+        });
+
+        // Scroll-based trigger with throttling
+        let ticking = false;
+        function handleScroll() {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    const contactSection = document.querySelector('.contact-section01');
+                    const rect = contactSection.getBoundingClientRect();
+                    
+                    if (rect.top < window.innerHeight * 0.8 && rect.bottom > 0) {
+                        animateContactPage();
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('resize', handleScroll);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+    </script>
+</body>
+</html>
