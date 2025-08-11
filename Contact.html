@@ -37,57 +37,208 @@
             white-space: nowrap;
             word-wrap: normal;
             direction: ltr;
-            -webkit-font-feature-settings: 'liga';
-            -webkit-font-smoothing: antialiased;
+            
         }
 
-        /* Navigation */
-        .navbar01 {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            z-index: 1000;
-            padding: 1rem 0;
-        }
+       
+/* Enhanced Auto-Scaling Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-family: "Figtree", sans-serif;
+  width: 100%;
+  background: rgba(12, 12, 17, 0.85);
+  backdrop-filter: saturate(180%) blur(12px);
+  box-shadow: 0 1px 1px #161616;
+  z-index: 9999;
+  padding: clamp(0.3rem, 1.5vw, 0.85rem) clamp(0.5rem, 3vw, 2rem);
+  transition: all 0.3s ease;
+}
 
-        .navbar-container01 {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
+.navbar-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
 
-        .logo01 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #ffffff;
-            text-decoration: none;
-        }
+.logo {
+  color: #FFF;
+  font-weight: 500;
+  font-size: clamp(0.9rem, 2.5vw, 1.5rem);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  transition: color 0.3s ease;
+  z-index: 10;
+  flex-shrink: 0; /* Prevent logo from shrinking */
+}
 
-        .nav-links01 {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
+.logo:hover {
+  color: #6446ea;
+}
 
-        .nav-links01 a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: clamp(0.5rem, 2vw, 2.2rem);
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  flex-wrap: nowrap; /* Keep items in one line */
+}
 
-        .nav-links01 a:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
+.nav-links li a {
+  color: #ddd;
+  font-family:"Figtree",sans-serif;
+  font-weight: 300;
+  font-size: clamp(0.7rem, 1.6vw, 1rem);
+  text-decoration: none;
+  padding: clamp(0.25rem, 1vw, 0.45rem) clamp(0.4rem, 1.2vw, 0.75rem);
+  border-radius: 0.65rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 
+.nav-links li a:hover {
+  color: #fff;
+  background: linear-gradient(95deg, #a679ff 0%, #6446ea 80%);
+}
+
+.nav-links li a.btn {
+  background: linear-gradient(141deg, rgb(180, 100, 220) 13%, rgba(120, 60, 160, 0) 35%, rgba(80, 40, 120, 0) 64%, rgb(100, 50, 150) 88%);
+  color: #fff;
+  font-weight: 500;
+  padding: clamp(0.3rem, 1.2vw, 0.55rem) clamp(0.8rem, 2vw, 1.5rem);
+  font-size: clamp(0.65rem, 1.4vw, 0.9rem);
+}
+
+.nav-links li a.btn:hover {
+  background: #6446ea;
+  box-shadow: 0 0 24px #6446eaee;
+}
+
+/* Remove hamburger completely */
+.hamburger {
+  display: none !important;
+}
+
+/* Responsive breakpoints for fine-tuning */
+@media (max-width: 1200px) {
+  .navbar {
+    padding: clamp(0.4rem, 1.2vw, 0.7rem) clamp(0.8rem, 2.5vw, 1.5rem);
+  }
+  
+  .nav-links {
+    gap: clamp(0.6rem, 1.8vw, 1.8rem);
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: clamp(0.35rem, 1vw, 0.6rem) clamp(0.6rem, 2vw, 1.2rem);
+  }
+  
+  .nav-links {
+    gap: clamp(0.4rem, 1.5vw, 1.4rem);
+  }
+  
+  .nav-links li a {
+    font-size: clamp(0.65rem, 1.4vw, 0.85rem);
+    padding: clamp(0.2rem, 0.8vw, 0.35rem) clamp(0.3rem, 1vw, 0.6rem);
+  }
+  
+  .nav-links li a.btn {
+    font-size: clamp(0.6rem, 1.3vw, 0.8rem);
+    padding: clamp(0.25rem, 1vw, 0.45rem) clamp(0.6rem, 1.6vw, 1.2rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: clamp(0.3rem, 0.6vw, 0.5rem) clamp(0.4rem, 1.5vw, 0.8rem);
+  }
+  
+  .nav-links {
+    gap: clamp(0.3rem, 1.2vw, 1rem);
+  }
+  
+  .logo {
+    font-size: clamp(0.8rem, 2vw, 1.1rem);
+  }
+  
+  .nav-links li a {
+    font-size: clamp(0.6rem, 1.2vw, 0.75rem);
+    padding: clamp(0.15rem, 0.6vw, 0.25rem) clamp(0.25rem, 0.8vw, 0.45rem);
+  }
+  
+  .nav-links li a.btn {
+    font-size: clamp(0.55rem, 1.1vw, 0.7rem);
+    padding: clamp(0.2rem, 0.8vw, 0.35rem) clamp(0.4rem, 1.2vw, 0.8rem);
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar {
+    padding: clamp(0.25rem, 0.6vw, 0.4rem) clamp(0.3rem, 1vw, 0.6rem);
+  }
+  
+  .nav-links {
+    gap: clamp(0.2rem, 1vw, 0.6rem);
+  }
+  
+  .logo {
+    font-size: clamp(0.75rem, 1.8vw, 1rem);
+  }
+  
+  .nav-links li a {
+    font-size: clamp(0.55rem, 1vw, 0.65rem);
+    padding: clamp(0.1rem, 0.5vw, 0.2rem) clamp(0.2rem, 0.6vw, 0.3rem);
+    border-radius: 0.4rem;
+  }
+  
+  .nav-links li a.btn {
+    font-size: clamp(0.5rem, 1vw, 0.6rem);
+    padding: clamp(0.15rem, 0.6vw, 0.25rem) clamp(0.3rem, 1vw, 0.6rem);
+  }
+}
+
+/* Ultra-small screens */
+@media (max-width: 320px) {
+  .navbar-container {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  
+  .nav-links {
+    gap: clamp(0.15rem, 0.8vw, 0.4rem);
+  }
+  
+  .nav-links li a {
+    font-size: clamp(0.5rem, 0.9vw, 0.6rem);
+    padding: clamp(0.08rem, 0.4vw, 0.15rem) clamp(0.15rem, 0.5vw, 0.25rem);
+  }
+  
+  .nav-links li a.btn {
+    font-size: clamp(0.45rem, 0.8vw, 0.55rem);
+    padding: clamp(0.1rem, 0.5vw, 0.2rem) clamp(0.2rem, 0.8vw, 0.4rem);
+  }
+}
+
+
+/* Add top margin to body to account for fixed navbar */
+body {
+    margin-top: auto; /* Adjust this value if needed */
+}
+
+/* Ensure content doesn't overlap with navbar */
+.center-content {
+    padding-top: 20px; 
+}
         .nav-links01 .btn01 {
             background: linear-gradient(141deg, rgb(180, 100, 220) 13%, rgba(120, 60, 160, 0) 35%, rgba(80, 40, 120, 0) 64%, rgb(100, 50, 150) 88%);
             color: #ffffff;
@@ -280,7 +431,7 @@
         }
 
         .form-submit01 {
-            background: linear-gradient(141deg, rgb(180, 100, 220) 13%, rgba(120, 60, 160, 0) 35%, rgba(80, 40, 120, 0) 64%, rgb(100, 50, 150) 88%);
+            background: linear-gradient(141deg, rgb(171, 68, 223) 13%, rgba(120, 60, 160, 0) 35%, rgba(80, 40, 120, 0) 64%, rgb(100, 50, 150) 88%);
             color: #fff;
             border: none;
             padding: 16px 32px;
@@ -312,7 +463,7 @@
         }
 
         .form-submit01:hover {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(169, 89, 243, 0.8);
             transform: translateY(-3px) scale(1.02);
             box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
         }
@@ -422,18 +573,17 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar01">
-        <div class="navbar-container01">
-            <a href="#" class="logo01">Nexora</a>
-            <ul class="nav-links01">
-                <li><a href="serv.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="Contact" class="btn01">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
+    <nav class="navbar">
+    <div class="navbar-container">
+        <a href="#" class="logo">Nexora</a>
+        <ul class="nav-links" id="nav-menu">
+            <li><a href="serv.html" class="nav-link">Services</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="#blog" class="nav-link">Blog</a></li>
+            <li><a href="#Contact.html" class="nav-link btn">Contact</a></li>
+        </ul>
+    </div>
+</nav>
     <!-- Contact Section -->
     <section class="contact-section01" id="contact">
         <div class="container01">
