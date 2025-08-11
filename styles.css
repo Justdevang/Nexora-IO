@@ -93,6 +93,7 @@ background: linear-gradient(141deg, var(--token-cd9ad879-0340-4881-8da6-7efa1100
 
 .logo {
   color: #FFF;
+	font-family:"Figtree",sans-serif;
   font-weight: 500;
   font-size: clamp(0.9rem, 2.5vw, 1.5rem);
   text-decoration: none;
@@ -118,6 +119,7 @@ background: linear-gradient(141deg, var(--token-cd9ad879-0340-4881-8da6-7efa1100
 
 .nav-links li a {
   color: #ddd;
+	font-family:"Figtree",sans-serif;
   font-weight: 300;
   font-size: clamp(0.7rem, 1.6vw, 1rem);
   text-decoration: none;
@@ -2249,3 +2251,4 @@ to { transform: rotate(-360deg); }
   color: #1ecb6b !important;
   font-size: 12px;
 }
+
