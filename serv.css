@@ -789,7 +789,7 @@ body {
 }
 
 .lead{
-  color: var(--muted);
+  color: #9b9797;
   font-size: 15px;
   max-width: 46ch;
   margin: 0 0 18px 0;
