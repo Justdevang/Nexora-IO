@@ -78,7 +78,7 @@
 
         .nav-links li a:hover {
             color: #fff;
-            background: linear-gradient(95deg, #a679ff 0%, #6446ea 80%);
+            background: linear-gradient(95deg, #261b3d98 0%, #432664bb 80%);
         }
 
         .nav-links li a.btn {
@@ -90,8 +90,7 @@
         }
 
         .nav-links li a.btn:hover {
-            background: #6446ea;
-            box-shadow: 0 0 24px #6446eaee;
+            box-shadow: 0 0 24px #291e58d3;
         }
 
         /* Remove hamburger completely */
@@ -660,4 +659,5 @@
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
             }
+
         }
