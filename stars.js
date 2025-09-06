@@ -629,3 +629,18 @@ window.addEventListener('DOMContentLoaded', () => {
 	//scrool effect
 	
 	// Add this to the end of your existing stars.js file
+// Set a cookie
+document.cookie = "username=Devang; expires=Fri, 31 Dec 2025 23:59:59 GMT; path=/";
+
+// Read cookies
+console.log(document.cookie);
+
+// Function to get a cookie by name
+function getCookie(name) {
+  let value = `; ${document.cookie}`;
+  let parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
+console.log(getCookie("username")); // Output: Devang
+
