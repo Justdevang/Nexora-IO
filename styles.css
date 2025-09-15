@@ -323,7 +323,7 @@ color: #dadada;
 .btn.outline {
   background: linear-gradient(141deg, rgb(180, 100, 220) 13%, rgba(120, 60, 160, 0) 35%, rgba(80, 40, 120, 0) 64%, rgb(100, 50, 150) 88%);
   border: 2px solid none;
-  color: #bab1ef;
+  color: #fff;
 }
 
 .btn.outline:hover {
@@ -2609,3 +2609,4 @@ to { transform: rotate(-360deg); }
     --chat--footer--background: linear-gradient(331deg,rgba(2, 2, 3, 1) 0%, rgba(26, 6, 33, 0.95) 42%, rgba(15, 3, 20, 1) 60%, rgba(8, 2, 13, 1) 100%);
     --chat--footer--color: #fff;
 }
+
