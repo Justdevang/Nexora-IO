@@ -73,7 +73,7 @@ background: linear-gradient(141deg, var(--token-cd9ad879-0340-4881-8da6-7efa1100
   left: 0;
   font-family: "Figtree", sans-serif;
   width: 100%;
-  background: rgba(12, 12, 17, 0.85);
+  background:  #0b0b0b3d;
   backdrop-filter: saturate(180%) blur(12px);
   box-shadow: 0 1px 1px #161616;
   z-index: 9999;
@@ -2609,4 +2609,5 @@ to { transform: rotate(-360deg); }
     --chat--footer--background: linear-gradient(331deg,rgba(2, 2, 3, 1) 0%, rgba(26, 6, 33, 0.95) 42%, rgba(15, 3, 20, 1) 60%, rgba(8, 2, 13, 1) 100%);
     --chat--footer--color: #fff;
 }
+
 
