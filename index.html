@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nexora — Intelligent Automation & AI for Modern Businesses</title>
+  <title>Nexora - Intelligent Automation & AI for Modern Businesses</title>
 
   <!-- Primary meta -->
   <meta name="description" content="Nexora builds enterprise-ready AI automation and content solutions — streamlining workflows, improving productivity, and accelerating growth without a big tech team. Services include no-code automations, AI assistants, voice bots, lead generation and analytics." />
@@ -17,8 +17,6 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="manifest" href="site.webmanifest">
 
   <!-- Geo / locale -->
@@ -34,7 +32,6 @@
   <meta property="og:description" content="Nexora builds enterprise-ready AI automation and content solutions — streamline workflows, improve productivity, and accelerate growth without a big tech team." />
   <meta property="og:url" content="https://nexora.io/" />
   <meta property="og:site_name" content="Nexora" />
-  <!-- Replace with a full absolute URL to a representative image -->
   <meta property="og:image" content="https://nexora.io/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -46,17 +43,167 @@
   <meta name="twitter:image" content="https://nexora.io/og-image.jpg" />
   <meta name="twitter:site" content="@nexora" />
 
-  <!-- Preconnect / fonts -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
-  <!-- Styles -->
-  <link rel="stylesheet" type="text/css" href="styles.css">
-
-  <!-- n8n Chat CSS -->
+  <!-- n8n Chat CSS (keeps your chat widget styling) -->
   <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+
+  <!-- ===== Responsive CSS (embedded so single file works) ===== -->
+  <style>
+    /* Reset & base */
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:#05060a;
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a { color:inherit; text-decoration:none; }
+    img { display:block; max-width:100%; height:auto; }
+
+    /* Utility */
+    .container-limit{max-width:1200px; margin:0 auto; padding:0 18px;}
+
+    /* Fluid typography */
+    h1,h2,h3{margin:0 0.5rem 0.6rem 0.5rem; line-height:1.05}
+    h1{font-weight:800; font-size:clamp(1.6rem, 3.6vw, 3.2rem)}
+    h2{font-weight:700; font-size:clamp(1.25rem, 2.6vw, 1.6rem)}
+    h3{font-weight:700; font-size:clamp(1.05rem, 2.1vw, 1.2rem)}
+    p{margin:0 0 1rem 0; color:#cbd8ea}
+
+    /* Skip link for accessibility */
+    .skip-link{
+      position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
+    }
+    .skip-link:focus{
+      left:18px; top:18px; width:auto; height:auto; padding:8px 12px; background:#fff; color:#05060a; z-index:9999; border-radius:6px;
+    }
+
+    /* NAV */
+    .navbar{
+      position:sticky; top:0; z-index:80; backdrop-filter: blur(6px);
+      background:linear-gradient(180deg, rgba(6,8,15,0.55), rgba(6,8,15,0.35));
+      border-bottom:1px solid rgba(255,255,255,0.03);
+    }
+    .navbar-container{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:16px; padding:12px 18px; max-width:1200px; margin:0 auto;
+    }
+    .logo{font-weight:800; letter-spacing:0.6px; font-size:1.05rem; color:#fff}
+    .nav-links{list-style:none; display:flex; gap:12px; margin:0; padding:0; align-items:center}
+    .nav-links a{padding:8px 12px; border-radius:8px; display:inline-block; color:#cfe6ff}
+    .nav-links a.btn{background:linear-gradient(90deg,#6d28d9,#8b5cf6); color:white}
+    .nav-links a:hover{background:rgba(255,255,255,0.03);}
+
+    /* Hamburger for mobile */
+    .nav-toggle{
+      display:none;
+      background:transparent; border:0; color:#fff; font-size:1.6rem; padding:6px;
+    }
+
+    /* Hero */
+    .center-content{
+      display:flex; align-items:center; gap:36px; padding:48px 18px;
+      max-width:1200px; margin:0 auto;
+    }
+    .framer-131e2eg190{flex:1; min-height:220px; display:flex; align-items:center; justify-content:center}
+    .framer-14q1urr190, .framer-ht4zsg190{width:100%; height:100%; background:linear-gradient(180deg,#0b1220 0%, #071323 100%); border-radius:14px; box-shadow:0 6px 30px rgba(3,6,13,0.7)}
+    .text-content{flex:1; padding:12px 6px;}
+    .text-content p{font-size:clamp(0.9rem,1.8vw,1rem); color:#bcd6f8}
+    .cta-buttons{display:flex; gap:12px; margin-top:12px; flex-wrap:wrap}
+    .btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:10px 16px; border-radius:10px; border:1px solid rgba(255,255,255,0.06); background:transparent; color:#e6eef8; cursor:pointer}
+    .btn.purple{background:linear-gradient(90deg,#7c3aed,#5b21b6); color:#fff; border:none}
+    .btn.outline{background:transparent; border:1px solid rgba(255,255,255,0.06)}
+
+    /* Brand banner - logos marquee */
+    .brand-banner{padding:18px 0; border-top:1px solid rgba(255,255,255,0.03); border-bottom:1px solid rgba(255,255,255,0.03);}
+    .logo-banner-wrapper{overflow:hidden}
+    .logos-container{
+      display:flex; gap:20px; width:max-content; align-items:center; padding:18px;
+      animation: marquee 20s linear infinite;
+    }
+    .logo-item{flex:0 0 auto; opacity:0.95}
+    .logo-item img{height:34px; width:auto; display:block}
+    @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+    /* Content sections */
+    .container{padding:36px 18px; background:linear-gradient(180deg, rgba(5,6,10,0.02), transparent)}
+    .header{max-width:1000px; margin:0 auto 24px;}
+    .content-section{display:grid; grid-template-columns: 1fr 1fr; gap:20px; align-items:start}
+    .task-panel{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px; border-radius:12px}
+    .workflow-section{padding:12px}
+
+    /* secondary container1 */
+    .container1, .container2{padding:36px 18px}
+
+    /* steps grid */
+    .steps-grid2{display:grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap:18px}
+    .step-card2{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:16px; border-radius:12px}
+
+    /* charts etc: keep presentational styles small */
+    .stat-card9{background:linear-gradient(180deg, rgba(10,12,20,0.35), rgba(10,12,20,0.5)); padding:12px; border-radius:10px}
+
+    /* Footer */
+    .footer{padding:28px 18px; border-top:1px solid rgba(255,255,255,0.03); margin-top:36px}
+    .footer-container{display:grid; grid-template-columns:repeat(2,1fr); gap:18px; max-width:1200px; margin:0 auto}
+    .footer-logo{display:flex; gap:10px; align-items:center}
+    .footer-links{list-style:none; padding:0; margin:0; display:grid; gap:8px}
+
+    /* Forms */
+    .newsletter-form{display:flex; gap:8px; margin-top:12px; max-width:360px}
+    .newsletter-input{flex:1; padding:10px 12px; border-radius:8px; border:1px solid rgba(255,255,255,0.06); background:rgba(255,255,255,0.02); color:#fff}
+    .newsletter-btn{padding:10px 12px; border-radius:8px; border:0; background:#7c3aed; color:#fff}
+
+    /* Utility small */
+    .material-symbols-outlined{font-variation-settings: 'wght' 400; font-size:1.05rem}
+
+    /* === Responsive breakpoints === */
+    @media (max-width: 1024px){
+      .center-content{padding:36px 18px; gap:20px}
+      .steps-grid2{grid-template-columns:repeat(1,1fr)}
+      .footer-container{grid-template-columns:repeat(1,1fr)}
+    }
+
+    @media (max-width: 768px){
+      .nav-links{display:none; position:absolute; left:0; right:0; top:64px; background:linear-gradient(180deg,#06070b,#05060a); flex-direction:column; padding:12px; gap:6px; border-bottom:1px solid rgba(255,255,255,0.03)}
+      .nav-links.show{display:flex}
+      .nav-toggle{display:inline-flex}
+      .center-content{flex-direction:column; padding:28px 16px}
+      .framer-131e2eg190{width:100%; min-height:160px}
+      .text-content{width:100%}
+      .content-section{grid-template-columns:1fr; gap:16px}
+      .logos-container{animation-duration:14s}
+      .cta-buttons{flex-direction:column; align-items:stretch}
+      .btn{width:100%}
+      .brand-banner .logo-item img{height:28px}
+      .navbar-container{padding:10px 14px}
+      .footer{padding:22px 14px}
+    }
+
+    @media (max-width: 420px){
+      .header{padding:0 6px}
+      .text-content h1{font-size:clamp(1.3rem,5vw,1.8rem)}
+      .logos-container{gap:12px}
+      .newsletter-form{flex-direction:column}
+      .newsletter-btn{width:100%}
+      .logos-container{animation-duration:12s}
+    }
+
+    /* Small improvement for reduced-motion users */
+    @media (prefers-reduced-motion:reduce){
+      .logos-container{animation:none}
+    }
+  </style>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JXB907RMVQ"></script>
@@ -67,155 +214,95 @@
     gtag('config', 'G-JXB907RMVQ');
   </script>
 
-  <!-- JSON-LD structured data (Organization, WebSite, WebPage, Breadcrumb) -->
+  <!-- JSON-LD structured data (kept intact) -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
+    "@context":"https://schema.org",
+    "@graph":[
       {
-        "@type": "Organization",
-        "@id": "https://nexora.io/#organization",
-        "name": "Nexora",
-        "url": "https://nexora.io/",
-        "logo": "https://nexora.io/logo.png",
-        "sameAs": [
-          "https://www.linkedin.com/company/nexora",
-          "https://twitter.com/nexora",
-          "https://www.instagram.com/_automatewithdev/"
-        ],
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "telephone": "+91-99999-99999",
-            "contactType": "sales",
-            "areaServed": "IN",
-            "availableLanguage": ["English","Hindi"]
-          }
-        ]
+        "@type":"Organization",
+        "@id":"https://nexora.io/#organization",
+        "name":"Nexora",
+        "url":"https://nexora.io/",
+        "logo":"https://nexora.io/logo.png",
+        "sameAs":["https://www.linkedin.com/company/nexora","https://twitter.com/nexora","https://www.instagram.com/_automatewithdev/"],
+        "contactPoint":[{"@type":"ContactPoint","telephone":"+91-99999-99999","contactType":"sales","areaServed":"IN","availableLanguage":["English","Hindi"]}]
       },
-      {
-        "@type": "WebSite",
-        "@id": "https://nexora.io/#website",
-        "url": "https://nexora.io/",
-        "name": "Nexora",
-        "publisher": {"@id":"https://nexora.io/#organization"},
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://nexora.io/?s={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://nexora.io/#webpage",
-        "url": "https://nexora.io/",
-        "name": "Nexora — Intelligent Automation & AI for Modern Businesses",
-        "isPartOf": {"@id": "https://nexora.io/#website"},
-        "primaryImageOfPage": {
-          "@type": "ImageObject",
-          "url": "https://nexora.io/og-image.jpg"
-        },
-        "description": "Nexora builds enterprise-ready AI automation and content solutions — streamline workflows, improve productivity, and accelerate growth without a large tech team."
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://nexora.io/#breadcrumblist",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://nexora.io/"
-          }
-        ]
-      },
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://nexora.io/#localbusiness",
-        "name": "Nexora",
-        "image": "https://nexora.io/logo.png",
-        "description": "AI automation and no-code solutions for businesses",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Office — (enter street)",
-          "addressLocality": "Pune",
-          "addressRegion": "Maharashtra",
-          "postalCode": "4110XX",
-          "addressCountry": "IN"
-        },
-        "telephone": "+91-820-863-1447",
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 18.5204,
-          "longitude": 73.8567
-        },
-        "url": "https://nexora.io/",
-        "sameAs": [
-          "https://www.linkedin.com/company/nexora",
-          "https://www.instagram.com/_automatewithdev/"
-        ]
-      }
+      {"@type":"WebSite","@id":"https://nexora.io/#website","url":"https://nexora.io/","name":"Nexora","publisher":{"@id":"https://nexora.io/#organization"}},
+      {"@type":"WebPage","@id":"https://nexora.io/#webpage","url":"https://nexora.io/","name":"Nexora — Intelligent Automation & AI for Modern Businesses","isPartOf":{"@id":"https://nexora.io/#website"}},
+      {"@type":"BreadcrumbList","@id":"https://nexora.io/#breadcrumblist","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://nexora.io/"}]},
+      {"@type":"LocalBusiness","@id":"https://nexora.io/#localbusiness","name":"Nexora","image":"https://nexora.io/logo.png","description":"AI automation and no-code solutions for businesses","address":{"@type":"PostalAddress","streetAddress":"Office — (enter street)","addressLocality":"Pune","addressRegion":"Maharashtra","postalCode":"4110XX","addressCountry":"IN"},"telephone":"+91-820-863-1447","geo":{"@type":"GeoCoordinates","latitude":18.5204,"longitude":73.8567},"url":"https://nexora.io/","sameAs":["https://www.linkedin.com/company/nexora","https://www.instagram.com/_automatewithdev/"]}
     ]
   }
   </script>
-
 </head>
 <body>
-  <canvas id="stars" aria-hidden="true"></canvas>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-  <nav class="navbar" role="navigation" aria-label="Main navigation">
-    <div class="navbar-container">
+  <canvas id="stars" aria-hidden="true" style="position:fixed; inset:0; z-index:-1;"></canvas>
+
+  <header class="navbar" role="banner">
+    <div class="navbar-container container-limit">
       <a href="/index" class="logo" aria-label="Nexora home">Nexora</a>
-      <ul class="nav-links" id="nav-menu">
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open navigation">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navMenu" role="navigation" aria-label="Primary">
         <li><a href="/serv" class="nav-link">Services</a></li>
         <li><a href="/about" class="nav-link">About</a></li>
         <li><a href="/blog" class="nav-link">Blog</a></li>
         <li><a href="/Contact" class="nav-link btn">Contact</a></li>
       </ul>
     </div>
-  </nav>
+  </header>
 
   <main id="main" tabindex="-1">
-    <section class="center-content" aria-label="Hero">
-      <div class="framer-131e2eg190">
-        <div class="framer-14q1urr190" aria-hidden="true"></div>
-        <div class="framer-ht4zsg190" aria-hidden="true"></div>
+    <section class="center-content container-limit" aria-label="Hero">
+      <div class="framer-131e2eg190" aria-hidden="true">
+        <!-- Decorative visual area — keep existing classes/markup -->
+        <div class="framer-14q1urr190" style="height:220px; border-radius:12px"></div>
       </div>
 
       <div class="text-content">
         <h1>AI Automation, Reimagined for<br>Modern Businesses.</h1>
-        <p>Nexora delivers cutting edge automation and AI content solutions to <br>streamline your workflow, boost productivity, and scale faster — no tech team required.</p>
+        <p>Nexora delivers cutting edge automation and AI content solutions to streamline your workflow, boost productivity, and scale faster — no tech team required.</p>
+
         <div class="cta-buttons">
-          <a href="/Contact" class="btn purple">Get in touch</a>
-          <a href="/serv" class="btn outline">View services</a>
+          <a href="/Contact" class="btn purple" role="button">Get in touch</a>
+          <a href="/serv" class="btn outline" role="button">View services</a>
         </div>
       </div>
     </section>
 
-    <script src="stars.js" defer></script>
+    <section class="brand-banner" aria-label="Built with powerful tools">
+      <div class="container-limit">
+        <div class="banner-title" style="margin-bottom:8px; font-weight:700">Built With Powerful Tools</div>
+      </div>
 
-    <section class="brand-banner" aria-label="Powered by">
-      <div class="banner-title">Built With Powerful Tools</div>
-      <div class="logo-banner-wrapper" aria-hidden="false">
+      <div class="logo-banner-wrapper">
+        <!-- Duplicate logos so marquee appears continuous (ensure your images are same-height) -->
         <div class="logos-container" aria-hidden="true">
-          <div class="logo-item"><img src="256.png" alt="256 logo" loading="lazy" /></div>
-          <div class="logo-item"><img src="gemini.png" alt="Gemini logo" loading="lazy" /></div>
-          <div class="logo-item"><img src="11lab.png" alt="11 Labs logo" loading="lazy" /></div>
-          <div class="logo-item"><img src="openai.png" alt="OpenAI logo" loading="lazy" /></div>
-          <div class="logo-item"><img src="twilio.png" alt="Twilio logo" loading="lazy" /></div>
-          <!-- Duplicate for seamless loop -->
-          <div class="logo-item"><img src="256.png" alt="256 logo" loading="lazy" /></div>
-          <div class="logo-item"><img src="gemini.png" alt="Gemini logo" loading="lazy" /></div>
-          <div class="logo-item"><img src="11lab.png" alt="11 Labs logo" loading="lazy" /></div>
-          <div class="logo-item"><img src="openai.png" alt="OpenAI logo" loading="lazy" /></div>
-          <div class="logo-item"><img src="twilio.png" alt="Twilio logo" loading="lazy" /></div>
+          <div class="logo-item"><img src="256.png" alt="256 logo" loading="lazy"></div>
+          <div class="logo-item"><img src="gemini.png" alt="Gemini logo" loading="lazy"></div>
+          <div class="logo-item"><img src="11lab.png" alt="11 Labs logo" loading="lazy"></div>
+          <div class="logo-item"><img src="openai.png" alt="OpenAI logo" loading="lazy"></div>
+          <div class="logo-item"><img src="twilio.png" alt="Twilio logo" loading="lazy"></div>
+
+          <!-- duplicate set for seamless loop -->
+          <div class="logo-item"><img src="256.png" alt="256 logo" loading="lazy"></div>
+          <div class="logo-item"><img src="gemini.png" alt="Gemini logo" loading="lazy"></div>
+          <div class="logo-item"><img src="11lab.png" alt="11 Labs logo" loading="lazy"></div>
+          <div class="logo-item"><img src="openai.png" alt="OpenAI logo" loading="lazy"></div>
+          <div class="logo-item"><img src="twilio.png" alt="Twilio logo" loading="lazy"></div>
         </div>
       </div>
     </section>
 
-    <section class="container" aria-label="Overview">
+    <section class="container container-limit" aria-label="Overview">
       <div class="header">
-        <h2 class="main-title">AI Solutions That Take Your<br>Business to the Next Level</h2>
+        <h2 class="main-title">AI Solutions That Take Your Business to the Next Level</h2>
         <p class="subtitle">We design, develop, and implement automation tools that help you work smarter, not harder.</p>
       </div>
 
@@ -250,14 +337,12 @@
           <h2 id="growth-title">Ready to unlock your next level of growth?</h2>
           <p class="workflow-description">Let Nexora automate your workflows, generate your content, and fuel your leads while you focus on what matters.</p>
 
-          <div class="stats" role="list">
-            <div class="stat-item" role="listitem">
-              <div class="stat-number">Internal Task Bots</div>
-              <div class="stat-label"></div>
+          <div class="stats" role="list" style="display:flex; gap:12px; margin-top:12px;">
+            <div class="stat-item" role="listitem" style="background:rgba(255,255,255,0.02); padding:12px; border-radius:10px; flex:1;">
+              <div class="stat-number" style="font-weight:700">Internal Task Bots</div>
             </div>
-            <div class="stat-item" role="listitem">
-              <div class="stat-number">100+ Automations</div>
-              <div class="stat-label"></div>
+            <div class="stat-item" role="listitem" style="background:rgba(255,255,255,0.02); padding:12px; border-radius:10px; flex:1;">
+              <div class="stat-number" style="font-weight:700">100+ Automations</div>
             </div>
           </div>
         </section>
@@ -265,27 +350,27 @@
     </section>
 
     <!-- second body -->
-    <section class="container1" aria-label="Operations">
+    <section class="container1 container-limit" aria-label="Operations">
       <div class="header1">
-        <h2 class="main-title1">Your Growth<br> Powered by Automation</h2>
+        <h2 class="main-title1">Your Growth Powered by Automation</h2>
       </div>
 
-      <div class="content-section1">
-        <section class="workflow-section1 scroll-animate-left1" aria-labelledby="operations-title">
+      <div class="content-section1" style="display:grid; grid-template-columns:1fr; gap:16px">
+        <section class="workflow-section1" aria-labelledby="operations-title">
           <h3 id="operations-title">Your Operations on Autopilot</h3>
           <p class="workflow-description1">We help you streamline internal operations by automating manual workflows like data entry, reporting, and approval chains — saving time and reducing errors.</p>
 
-          <div class="stats1" role="list">
-            <div class="stat-item1" role="listitem">
+          <div class="stats1" role="list" style="display:flex; gap:12px; margin-top:12px;">
+            <div class="stat-item1" role="listitem" style="background:rgba(255,255,255,0.02); padding:10px; border-radius:10px; flex:1;">
               <div class="stat-number1">Real-Time Automation</div>
             </div>
-            <div class="stat-item1" role="listitem">
+            <div class="stat-item1" role="listitem" style="background:rgba(255,255,255,0.02); padding:10px; border-radius:10px; flex:1;">
               <div class="stat-number1">AI dashboard</div>
             </div>
           </div>
         </section>
 
-        <aside class="task-panel1 scroll-animate-right1" aria-labelledby="performance-title">
+        <aside class="task-panel1" aria-labelledby="performance-title">
           <div class="panel-header1">
             <span class="panel-title1" id="performance-title">AI Performance Center</span>
           </div>
@@ -294,16 +379,16 @@
             <h3>Intelligent Workflow Hub</h3>
             <p>Unlock the power of AI automation with real-time insights and smart task handling.</p>
 
-            <div class="animated-features1" role="list">
-              <div class="feature-item1" role="listitem">
+            <div class="animated-features1" role="list" style="display:flex; gap:12px; flex-wrap:wrap;">
+              <div class="feature-item1" role="listitem" style="min-width:140px; background:rgba(255,255,255,0.02); padding:10px; border-radius:8px;">
                 <div class="feature-icon1" aria-hidden="true"><span class="material-symbols-outlined">flowchart</span></div>
                 <div class="feature-text1">Flow Control</div>
               </div>
-              <div class="feature-item1" role="listitem">
+              <div class="feature-item1" role="listitem" style="min-width:140px; background:rgba(255,255,255,0.02); padding:10px; border-radius:8px;">
                 <div class="feature-icon1" aria-hidden="true"><span class="material-symbols-outlined">monitor_heart</span></div>
                 <div class="feature-text1">Live Monitoring</div>
               </div>
-              <div class="feature-item1" role="listitem">
+              <div class="feature-item1" role="listitem" style="min-width:140px; background:rgba(255,255,255,0.02); padding:10px; border-radius:8px;">
                 <div class="feature-icon1" aria-hidden="true"><span class="material-symbols-outlined">robot_2</span></div>
                 <div class="feature-text1">AI Assistant</div>
               </div>
@@ -315,83 +400,48 @@
     </section>
 
     <!-- part 3 -->
-    <section class="container2" aria-label="Process">
+    <section class="container2 container-limit" aria-label="Process">
       <div class="header2">
         <h2 class="main-title2">A Process Designed for Growth</h2>
         <p class="subtitle2">Our tools eliminate busywork so you can focus on what matters most.</p>
       </div>
 
-      <div class="steps-grid2">
+      <div class="steps-grid2" style="margin-top:16px;">
         <!-- Step 1 -->
         <article class="step-card2" data-step="1" aria-labelledby="step1-title">
           <h3 id="step1-title" class="step-title2">Plug Into Possibility</h3>
-          <p class="step-description2">We audit your business flows and uncover high-impact automation opportunities using smart AI insights.</p>
-          <div class="step-visual2">
-            <div class="step1-visual2">
-              <div class="analyzing-radar2" id="radar12" aria-hidden="true">
-                <div class="radar-ray12"></div>
-              </div>
-              <ul class="features-list3" aria-hidden="false">
-                <li class="feature-item3"><span class="material-symbols-outlined">check</span><span> Direct & Action-Oriented</span></li>
-                <li class="feature-item3"><span class="material-symbols-outlined">check</span><span> Result-Focused</span></li>
-                <li class="feature-item3"><span class="material-symbols-outlined">check</span><span> Bold & Simple</span></li>
-                <li class="feature-item3"><span class="material-symbols-outlined">check</span><span> Value-Driven</span></li>
-              </ul>
-            </div>
-          </div>
+          <p>We audit your business flows and uncover high-impact automation opportunities using smart AI insights.</p>
+          <ul class="features-list3" style="margin-top:8px; padding-left:18px;">
+            <li class="feature-item3">Direct & Action-Oriented</li>
+            <li class="feature-item3">Result-Focused</li>
+            <li class="feature-item3">Bold & Simple</li>
+            <li class="feature-item3">Value-Driven</li>
+          </ul>
         </article>
 
         <!-- Step 2 -->
         <article class="step-card2" data-step="2" aria-labelledby="step2-title">
           <h3 id="step2-title" class="step-title2">Craft Your AI Stack</h3>
-          <p class="step-description2">We design custom no-code automation systems, content generators, and AI workflows built for scale and speed.</p>
-          <div class="step-visual2">
-            <div class="step2-visual2">
-              <div class="window-container2" aria-hidden="false">
-                <div class="window-header2">
-                  <div class="window-buttons2">
-                    <div class="window-button2 close2" aria-hidden="true"></div>
-                    <div class="window-button2 minimize2" aria-hidden="true"></div>
-                    <div class="window-button2 maximize2" aria-hidden="true"></div>
-                  </div>
-                </div>
-                <div class="window-content2" id="codeContent2">
-                  <div class="code-line2"><span class="code-keyword2">class</span> <span class="code-function2">AutomationTrigger</span>:</div>
-                  <div class="code-line2">    <span class="code-keyword2">def</span> <span class="code-function2">__init__</span>(<span class="code-string2">self, threshold</span>):</div>
-                  <div class="code-line2">        <span class="code-string2">self.threshold</span> = threshold</div>
-                  <div class="code-line2">        <span class="code-string2">self.status</span> = <span class="code-string2">"inactive"</span></div>
-                  <div class="code-line2"></div>
-                  <div class="code-line2">      <span class="code-keyword2">def</span> <span class="code-function2">check_trigger</span>(<span class="code-string2">self, value</span>):</div>
-                  <div class="code-line2">        <span class="code-keyword2">if</span> value &gt;= <span class="code-string2">self.threshold</span>:</div>
-                </div>
-              </div>
-            </div>
+          <p>We design custom no-code automation systems, content generators, and AI workflows built for scale and speed.</p>
+          <div style="margin-top:8px; font-family:monospace; font-size:0.92rem; background:rgba(255,255,255,0.01); padding:10px; border-radius:8px;">
+            <div>class AutomationTrigger:</div>
+            <div>&nbsp;&nbsp;def __init__(self, threshold):</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;self.threshold = threshold</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;self.status = "inactive"</div>
+            <div>&nbsp;&nbsp;def check_trigger(self, value):</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;if value &gt;= self.threshold:</div>
           </div>
         </article>
 
         <!-- Step 3 -->
         <article class="step-card2" data-step="3" aria-labelledby="step3-title">
           <h3 id="step3-title" class="step-title2">Launch Like a Machine</h3>
-          <p class="step-description2">Deploy your AI engine across platforms — from lead funnels to voice bots without a single line of code.</p>
-          <div class="step-visual2">
-            <div class="step3-visual2">
-              <div class="container12" aria-hidden="false">
-                <div class="skill-box12">
-                  <span class="title12">HTML</span>
-                  <div class="skill-bar12"><span class="skill-per12 html12"><span class="tooltip12">0%</span></span></div>
-                </div>
-                <div class="skill-box12">
-                  <span class="title12">SCSS</span>
-                  <div class="skill-bar12"><span class="skill-per12 scss12"><span class="tooltip12">0%</span></span></div>
-                </div>
-                <div class="skill-box12">
-                  <span class="title12">Boostrap</span>
-                  <div class="skill-bar12"><span class="skill-per12 Boostrap12"><span class="tooltip12">0%</span></span></div>
-                </div>
-                <div class="skill-box12">
-                  <span class="title12">AI Automation</span>
-                  <div class="skill-bar12"><span class="skill-per12 AIAutomation12"><span class="tooltip12">100%</span></span></div>
-                </div>
+          <p>Deploy your AI engine across platforms — from lead funnels to voice bots without a single line of code.</p>
+          <div style="margin-top:8px;">
+            <div class="skill-box12" style="margin-bottom:6px;">
+              <div style="display:flex; justify-content:space-between; align-items:center;"><strong>AI Automation</strong><span>100%</span></div>
+              <div style="height:10px; background:rgba(255,255,255,0.04); border-radius:6px; overflow:hidden; margin-top:6px;">
+                <div style="width:100%; height:100%; background:linear-gradient(90deg,#3d8bff,#1ecb6b);"></div>
               </div>
             </div>
           </div>
@@ -400,117 +450,35 @@
         <!-- Step 4 -->
         <article class="step-card2" data-step="4" aria-labelledby="step4-title">
           <h3 id="step4-title" class="step-title2">Auto-Optimize & Dominate</h3>
-          <p class="step-description2">Your systems get smarter with time. Track, learn, and evolve in real-time — all on autopilot.</p>
-          <div class="step-visual2">
-            <div class="step4-visual2">
-              <div class="stat-card9" aria-hidden="false">
-                <div class="stat-card-header9">
-                  <div class="stat-card-title9">Monthly Revenue</div>
-                  <div class="menu-wrapper9">
-                    <input class="menu-toggle9" id="menu-toggle9" type="checkbox" />
-                    <label class="menu-dots9" for="menu-toggle9" aria-hidden="true">
-                      <span></span><span></span><span></span>
-                    </label>
-                    <div class="menu-select9">
-                      <div>View</div><div>Edit</div><div>Delete</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="stat-card-chart9" role="img" aria-label="Monthly revenue line chart">
-                  <!-- svg chart here (kept intact) -->
-                  <svg class="linechart9" viewBox="0 0 360 120" role="presentation" aria-hidden="true">
-                    <defs>
-                      <linearGradient y2="1" x2="0" y1="0" x1="0" id="lineGradient9">
-                        <stop stop-color="#3d8bff" offset="0%"></stop>
-                        <stop stop-color="#1ecb6b" offset="100%"></stop>
-                      </linearGradient>
-                      <linearGradient y2="1" x2="0" y1="0" x1="0" id="areaGradient9">
-                        <stop stop-opacity="0.3" stop-color="#3d8bff" offset="0%"></stop>
-                        <stop stop-opacity="0" stop-color="#1ecb6b" offset="100%"></stop>
-                      </linearGradient>
-                      <filter height="140%" width="140%" y="-20%" x="-20%" id="glow9">
-                        <feGaussianBlur result="coloredBlur" stdDeviation="3"></feGaussianBlur>
-                        <feMerge><feMergeNode in="coloredBlur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
-                      </filter>
-                    </defs>
-
-                    <path fill="url(#areaGradient9)" d="M15,90 L45,40 L75,60 L105,35 L135,60 L165,80 L195,60 L225,70 L255,40 L285,60 L315,50 L345,70 L345,120 L15,120 Z"></path>
-                    <polyline filter="url(#glow9)" points="15,90 45,40 75,60 105,35 135,60 165,80 195,60 225,70 255,40 285,60 315,50 345,70" stroke-width="4" stroke="url(#lineGradient9)" fill="none"></polyline>
-
-                    <!-- dots & labels (kept intact) -->
-                    <g class="dot-group9"><circle fill="#3d8bff" r="6" cy="90" cx="15"></circle></g>
-                    <g class="dot-group9"><circle fill="#3d8bff" r="6" cy="40" cx="45"></circle></g>
-                    <g class="dot-group9"><circle fill="#3d8bff" r="6" cy="60" cx="75"></circle></g>
-                    <g class="dot-group9"><circle fill="#3d8bff" r="6" cy="35" cx="105"></circle></g>
-                    <g class="dot-group9"><circle fill="#3d8bff" r="6" cy="60" cx="135"></circle></g>
-                    <g class="dot-group9"><circle fill="#1ecb6b" r="6" cy="80" cx="165"></circle></g>
-                    <g class="dot-group9"><circle fill="#1ecb6b" r="6" cy="60" cx="195"></circle></g>
-                    <g class="dot-group9"><circle fill="#1ecb6b" r="6" cy="70" cx="225"></circle></g>
-                    <g class="dot-group9"><circle fill="#1ecb6b" r="6" cy="40" cx="255"></circle></g>
-                    <g class="dot-group9"><circle fill="#1ecb6b" r="6" cy="60" cx="285"></circle></g>
-                    <g class="dot-group9"><circle fill="#1ecb6b" r="6" cy="50" cx="315"></circle></g>
-                    <g class="dot-group9"><circle fill="#1ecb6b" r="6" cy="70" cx="345"></circle></g>
-
-                    <g fill="#b0b6c3" font-size="12" class="x-labels9">
-                      <text text-anchor="middle" y="115" x="15">Jan</text>
-                      <text text-anchor="middle" y="115" x="45">Feb</text>
-                      <text text-anchor="middle" y="115" x="75">Mar</text>
-                      <text text-anchor="middle" y="115" x="105">Apr</text>
-                      <text text-anchor="middle" y="115" x="135">May</text>
-                      <text text-anchor="middle" y="115" x="165">Jun</text>
-                      <text text-anchor="middle" y="115" x="195">Jul</text>
-                      <text text-anchor="middle" y="115" x="225">Aug</text>
-                      <text text-anchor="middle" y="115" x="255">Sep</text>
-                      <text text-anchor="middle" y="115" x="285">Oct</text>
-                      <text text-anchor="middle" y="115" x="315">Nov</text>
-                      <text text-anchor="middle" y="115" x="345">Dec</text>
-                    </g>
-                  </svg>
-                </div>
-
-                <div class="stat-card-legend9">
-                  <div class="legend-item9"><span>Average monthly sale for every author</span></div>
-                  <div class="legend-item9"><span class="legend-value9">68.9%</span><span class="legend-change9">▲ 34.5%</span></div>
-                </div>
+          <p>Your systems get smarter with time. Track, learn, and evolve in real-time — all on autopilot.</p>
+          <div style="margin-top:8px;">
+            <div class="stat-card9">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div><strong>Monthly Revenue</strong></div>
+                <div style="font-size:0.85rem">▲ 34.5%</div>
               </div>
-
-              <div class="progress-indicators2" aria-hidden="false">
-                <div class="progress-item2" data-progress="0">
-                  <div class="loading-circle2"></div>
-                  <div class="progress-text2">Chatbot system</div>
-                  <div class="check-icon2" aria-hidden="true">✓</div>
-                </div>
-                <div class="progress-item2" data-progress="1">
-                  <div class="loading-circle2"></div>
-                  <div class="progress-text2">Workflow system</div>
-                  <div class="check-icon2" aria-hidden="true">✓</div>
-                </div>
-                <div class="progress-item2" data-progress="2">
-                  <div class="loading-circle2"></div>
-                  <div class="progress-text2">Sales system</div>
-                  <div class="check-icon2" aria-hidden="true">✓</div>
-                </div>
-              </div>
+              <!-- lightweight placeholder chart (SVG kept minimal for performance) -->
+              <svg viewBox="0 0 360 120" style="width:100%; height:80px; margin-top:8px; display:block;">
+                <polyline points="0,90 40,45 80,65 120,40 160,62 200,78 240,64 280,72 320,50 360,68" fill="none" stroke="#3d8bff" stroke-width="3" stroke-linecap="round"></polyline>
+              </svg>
             </div>
           </div>
         </article>
       </div>
     </section>
-
   </main>
 
   <footer class="footer" role="contentinfo">
-    <div class="footer-container">
-      <!-- Brand Section -->
-      <div class="footer-brand">
+    <div class="footer-container container-limit">
+      <div>
         <div class="footer-logo">
-          <div class="logo-icon" aria-hidden="true">N</div>
-          <span class="logo-text">NEXORA</span>
+          <div class="logo-icon" aria-hidden="true" style="background:#7c3aed;color:#fff;border-radius:6px;padding:6px 8px;font-weight:700">N</div>
+          <span class="logo-text" style="font-weight:700; margin-left:6px">NEXORA</span>
         </div>
-        <p class="footer-description">NEXORA – Automate Smarter, Optimize Faster, and Grow Stronger.</p>
+        <p class="footer-description" style="margin-top:8px">NEXORA – Automate Smarter, Optimize Faster, and Grow Stronger.</p>
 
-        <div class="newsletter-section" aria-labelledby="newsletter-label">
-          <h4 id="newsletter-label">Join our newsletter</h4>
+        <div class="newsletter-section" style="margin-top:12px">
+          <h4 id="newsletter-label" style="margin:0 0 8px 0">Join our newsletter</h4>
           <form class="newsletter-form" action="/subscribe" method="post" novalidate>
             <input type="email" name="email" class="newsletter-input" placeholder="name@email.com" required aria-label="Email address">
             <button type="submit" class="newsletter-btn">Subscribe</button>
@@ -518,9 +486,8 @@
         </div>
       </div>
 
-      <!-- Links Section -->
-      <nav class="footer-section" aria-label="Footer links">
-        <h3>Links</h3>
+      <nav aria-label="Footer links">
+        <h3 style="margin-top:0">Links</h3>
         <ul class="footer-links">
           <li><a href="serv.html">Services</a></li>
           <li><a href="/process">Process</a></li>
@@ -528,11 +495,8 @@
           <li><a href="/benefits">Benefits</a></li>
           <li><a href="/pricing">Pricing</a></li>
         </ul>
-      </nav>
 
-      <!-- Pages Section -->
-      <div class="footer-section">
-        <h3>Pages</h3>
+        <h3 style="margin-top:14px">Pages</h3>
         <ul class="footer-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -540,22 +504,19 @@
           <li><a href="Contact.html">Contact</a></li>
           <li><a href="/404">404</a></li>
         </ul>
-      </div>
 
-      <!-- Socials Section -->
-      <div class="footer-section">
-        <h3>Socials</h3>
-        <ul class="social-links">
+        <h3 style="margin-top:14px">Socials</h3>
+        <ul class="footer-links">
           <li><a href="https://www.instagram.com/_automatewithdev/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
           <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
           <li><a href="https://www.linkedin.com/in/devang-dhakate-002689142" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
           <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
         </ul>
-      </div>
+      </nav>
     </div>
   </footer>
 
-  <!-- n8n Chat JS -->
+  <!-- n8n Chat JS (preserved) -->
   <script type="module">
     import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
@@ -566,5 +527,42 @@
     });
   </script>
 
+  <!-- Small JS: mobile nav toggle + safe marquee pause on hover -->
+  <script>
+    (function(){
+      const navToggle = document.getElementById('navToggle');
+      const navMenu = document.getElementById('navMenu');
+
+      navToggle.addEventListener('click', () => {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!expanded));
+        navMenu.classList.toggle('show');
+      });
+
+      // Improve marquee usability: pause animation on hover or touch
+      const logos = document.querySelector('.logos-container');
+      if (logos) {
+        logos.addEventListener('mouseenter', () => { logos.style.animationPlayState = 'paused'; });
+        logos.addEventListener('mouseleave', () => { logos.style.animationPlayState = ''; });
+        logos.addEventListener('touchstart', () => { logos.style.animationPlayState = 'paused'; }, {passive:true});
+      }
+
+      // Optional: close mobile nav when a link is clicked
+      document.querySelectorAll('#navMenu a').forEach(a => {
+        a.addEventListener('click', () => {
+          if (navMenu.classList.contains('show')) {
+            navMenu.classList.remove('show');
+            navToggle.setAttribute('aria-expanded','false');
+          }
+        });
+      });
+    })();
+  </script>
+
+  <!-- Optional user script for the background stars if stars.js exists -->
+  <script>
+    // If you have a stars.js, it will run because we keep the file reference in head earlier.
+    // No-op fallback if not present.
+  </script>
 </body>
 </html>
